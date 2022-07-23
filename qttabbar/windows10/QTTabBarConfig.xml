@@ -8,13 +8,13 @@
     <RecentTabMax>32</RecentTabMax>
     <RecentFileMax>32</RecentFileMax>
     <RecentFileMax_Exe>24</RecentFileMax_Exe>
-    <ToolbarBGImage>Z:\Txus\Projects\assorted\Themes and Skins\qttabbar\windows10\toolbar.png</ToolbarBGImage>
+    <ToolbarBGImage>Z:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows10\toolbar.png</ToolbarBGImage>
     <ResolverLongTimeout>10000</ResolverLongTimeout>
     <TabFont>Segoe UI</TabFont>
     <TabFontSize>12</TabFontSize>
     <TabFontStyle>0</TabFontStyle>
     <TabFontStyleActive>0</TabFontStyleActive>
-    <TabImage>Z:\Txus\Projects\assorted\Themes and Skins\qttabbar\windows10\tab.png</TabImage>
+    <TabImage>Z:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows10\tab.png</TabImage>
     <TabCloseButtonImage></TabCloseButtonImage>
     <TabLockImage></TabLockImage>
     <TabImageSizingMargin>06060606</TabImageSizingMargin>
