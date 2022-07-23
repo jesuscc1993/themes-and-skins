@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <skin>
+
   <info>
     <author>MetalTxus</author>
-    <website>http://txusmetal4ever.deviantart.com</website>
+    <website>https://github.com/jesuscc1993</website>
   </info>
 
   <osds>
@@ -35,4 +36,5 @@
       />
     </volume>
   </sliders>
+
 </skin>
