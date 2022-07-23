@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<skin>
+  <info>
+    <author>MetalTxus</author>
+    <website>http://txusmetal4ever.deviantart.com</website>
+  </info>
+
+  <osds>
+    <volume background="OSD\bg.png" defaultUnits="100">
+      <meter
+        type="NumberStrip"
+        image="OSD\numbers.png"
+        align="right"
+        units="100"
+        x="40"
+        y="10"
+      />
+      <iconset location="Icons\Volume"/>
+      <sound file="sound.wav"/>
+    </volume>
+
+    <mute background="OSD\muted.png"/>
+    <eject background="OSD\eject.png"/>
+  </osds>
+
+  <sliders>
+    <volume background="Slider\background.png">
+      <slider
+        type="vertical"
+        image="Slider\knob.png"
+        x="4"
+        y="7"
+        width="16"
+        height="102"
+      />
+    </volume>
+  </sliders>
+</skin>

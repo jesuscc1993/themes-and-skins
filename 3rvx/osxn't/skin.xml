@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XMLskinSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <info>
+    <author>MetalTxus</author>
+    <website>http://txusmetal4ever.deviantart.com</website>
+
+    <skinVersion>2</skinVersion>
+    <formatVersion>1</formatVersion>
+  </info>
+
+  <osd>
+    <meterOrientation>horizontal</meterOrientation>
+
+    <meterPosition>
+      <X>18</X>
+      <Y>173</Y>
+    </meterPosition>
+
+    <meterMax>15</meterMax>
+  </osd>
+
+  <control>
+    <orientation>horizontal</orientation>
+
+    <sliderPosition>
+      <Location>
+        <X>46</X>
+        <Y>19</Y>
+      </Location>
+      <Size>
+        <Width>166</Width>
+        <Height>8</Height>
+      </Size>
+    </sliderPosition>
+  </control>
+</XMLskinSettings>
