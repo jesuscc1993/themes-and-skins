@@ -8,23 +8,23 @@
     <RecentTabMax>32</RecentTabMax>
     <RecentFileMax>32</RecentFileMax>
     <RecentFileMax_Exe>24</RecentFileMax_Exe>
-    <ToolbarBGImage>Z:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows10-chrome\toolbar.png</ToolbarBGImage>
+    <ToolbarBGImage>Z:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows-10-firefox\toolbar.png</ToolbarBGImage>
     <ResolverLongTimeout>10000</ResolverLongTimeout>
     <TabFont>Segoe UI</TabFont>
     <TabFontSize>12</TabFontSize>
     <TabFontStyle>0</TabFontStyle>
     <TabFontStyleActive>0</TabFontStyleActive>
-    <TabImage>Z:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows10-chrome\tab.png</TabImage>
-    <TabCloseButtonImage>Z:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows10\close-icon.png</TabCloseButtonImage>
+    <TabImage>Z:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows-10-firefox\tab.png</TabImage>
+    <TabCloseButtonImage>Z:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows-10-firefox\close-icon.png</TabCloseButtonImage>
     <TabLockImage></TabLockImage>
-    <TabImageSizingMargin>08080804</TabImageSizingMargin>
+    <TabImageSizingMargin>0A0A0A0A</TabImageSizingMargin>
     <TabTextOffsets>-65536</TabTextOffsets>
     <TabCloseButtonOffsets>0</TabCloseButtonOffsets>
     <TabLockImageOffsets>0</TabLockImageOffsets>
     <TabIconOffsets>0</TabIconOffsets>
     <TabPadding>04000000000000000400000000000000</TabPadding>
     <TabWidth>160</TabWidth>
-    <TabHeight>32</TabHeight>
+    <TabHeight>40</TabHeight>
     <TabWidthMax>320</TabWidthMax>
     <TabWidthMin>192</TabWidthMin>
     <DefaultTabLocation>0000</DefaultTabLocation>
