@@ -1,7 +1,6 @@
 [Variables]
 AntiAlias = 0
-FontEffectColor = 0, 0, 0
-FontWeight = 500
+; FontEffectColor = 0, 0, 0
 ; InlineSetting  = Shadow | 0 | 0 | 0 | 0, 0, 0
 ; InlineSetting2 = Shadow | 0 | 0 | 0 | 0, 0, 0
 ; InlineSetting3 = Shadow | 0 | 0 | 0 | 0, 0, 0
