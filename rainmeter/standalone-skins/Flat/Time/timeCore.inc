@@ -55,4 +55,4 @@ W = #Width#
 H = #Height#
 X = #TextX#
 Y = #TextY#
-;Text = 88:88
+;Text = 08:08
