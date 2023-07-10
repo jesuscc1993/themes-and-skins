@@ -121,9 +121,6 @@
   pointer-events: none;
   z-index: 12;
 }
-[class*='appportrait_Draggable']:has([class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom']) {
-  opacity: .25;
-}
 
 /* start: fix uninstalled games */
 [class*="appportrait_UninstalledBarBottom"] {
