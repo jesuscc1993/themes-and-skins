@@ -1,0 +1,13 @@
+:root {
+  --c-background: #202326;
+  --c-sidebar: #171718;
+}
+
+[class*="libraryhome_InnerContainer"],
+[class*="libraryhome_UpdatesContainer"] {
+  background: var(--c-background) !important;
+}
+
+[class*="gamelistbar_Container"] {
+  background: var(--c-sidebar) !important;
+}
