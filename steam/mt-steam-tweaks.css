@@ -122,7 +122,13 @@
   z-index: 12;
 }
 
-/* start: fix uninstalled games */
+/* hide sidebar game icons */
+[class*='library_LeftListSizableContainer'] [class*='gamelistentry_AppIcon'],
+[class*='library_LeftListSizableContainer'] [class*='gamelistentry_GameIcon'] {
+  display: none;
+}
+
+/* fix uninstalled games */
 [class*="appportrait_UninstalledBarBottom"] {
   margin-top: 0 !important;
 }
