@@ -5,6 +5,12 @@
   --context-menu-padding: 6px 12px;
 }
 
+/* always hide address bar */
+[class*='steamdesktop_URLBar_'],
+[class*='steamdesktop_URLBarReplacement_'] {
+  display: none !important;
+}
+
 /* reduce context menu padding */
 .DesktopUI [class*='contextmenu_contextMenuItem'],
 [class*='contextmenu_ForceDesktop'] [class*='contextmenu_contextMenuItem'] {
