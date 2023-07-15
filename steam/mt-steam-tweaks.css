@@ -5,6 +5,16 @@
   --context-menu-padding: 6px 12px;
 }
 
+/* hide favorites collection */
+[class*='libraryhomeshowcases_ShowcaseGrid_'][style*='grid-auto-rows: 148px;'] > [class*='allcollections_Collection_']:first-of-type {
+  display: none !important;
+}
+
+/* hide soundtracks collection */
+[class*='libraryhomeshowcases_ShowcaseGrid_'][style*='grid-auto-rows: 148px;'] > [class*='allcollections_Collection_']:last-of-type {
+  display: none !important;
+}
+
 /* always hide address bar */
 [class*='steamdesktop_URLBar_'],
 [class*='steamdesktop_URLBarReplacement_'] {
@@ -52,10 +62,15 @@
 /* custom cover sizes */
 [class*="libraryhomeshowcases_ShowcaseGrid"] {
   gap: 16px !important;
-  grid-auto-rows: var(--cover-height) !important;
   grid-template-columns: repeat(auto-fill, var(--cover-width)) !important;
   justify-content: center !important;
   padding: 8px 0 !important;
+}
+[class*="libraryhomeshowcases_ShowcaseGrid"][style*='grid-auto-rows: 222px;'] {
+  grid-auto-rows: var(--cover-height) !important;
+}
+[class*="libraryhomeshowcases_ShowcaseGrid"][style*='grid-auto-rows: 148px;'] {
+  grid-auto-rows: var(--cover-width) !important;
 }
 [class*="cssgrid_Container"] {
   height: auto !important;
@@ -107,15 +122,11 @@
 /* */
 
 /* disable cover hover */
-[class*='HoversEnabled'] [class*='LibraryItemBox']:hover {
+[class*='HoversEnabled'] [class*='LibraryItemBox'],
+[class*='HoversEnabled'] [class*='LibraryItemBox'] [class*='libraryassetimage_Image_'],
+[class*='HoversEnabled'] [class*='LibraryItemBox'] [class*='appportrait_FooterBlurImage_'] {
   transform: none !important;
 }
-
-[class*='HoversEnabled']:hover [class*='AppPortraitBanner'],
-[class*='HoversEnabled']:hover [class*='LibraryItemBoxSubscript'] {
-  transform: none !important;
-}
-/* */
 
 /* cover border radius */
 [class*='appportrait_LibraryItemBox'] {
@@ -130,6 +141,9 @@
   height: 100%;
   pointer-events: none;
   z-index: 12;
+}
+[class*='HoversEnabled'] [class*='LibraryItemBox']:hover:not([class*='appportrait_Landscape_'] [class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom']) {
+  transform: rotateX(3deg) translateZ(15px);
 }
 
 /* hide sidebar game icons */
