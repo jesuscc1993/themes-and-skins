@@ -36,7 +36,7 @@
   z-index: 100;
 }
 [class*='library_LeftListSizableContainer'] {
-  height: calc(100% - 12px);
+  height: 100%;
   padding-right: 16px;
 }
 [class*='library_LeftListSizableContainer']:not(:hover) {
@@ -44,8 +44,9 @@
 }
 
 [class*='libraryhome_UpdatesContainer'] {
-  height: 316px !important;
   border-bottom: 16px solid #2c323a;
+  height: 316px !important;
+  width: 100%;
 }
 [class*='libraryhome_UpdatesContainer']:hover {
   border-bottom-width: 0;
