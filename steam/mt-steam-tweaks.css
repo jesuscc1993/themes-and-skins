@@ -1,7 +1,8 @@
 :root {
   --cover-border-radius: 3.5px;
-  --cover-width: 142px;
+  --cover-width: 140px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
+  --grid-gap: 18px;
   --context-menu-padding: 6px 12px;
 }
 
@@ -62,7 +63,7 @@
 
 /* custom cover sizes */
 [class*="libraryhomeshowcases_ShowcaseGrid"] {
-  gap: 16px !important;
+  gap: var(--grid-gap) !important;
   grid-template-columns: repeat(auto-fill, var(--cover-width)) !important;
   justify-content: center !important;
   padding: 8px 0 !important;
