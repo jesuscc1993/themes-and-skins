@@ -1,5 +1,5 @@
 :root {
-  --cover-border-radius: 3.5px;
+  --cover-border-radius: 4px;
   --cover-width: 140px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
   --grid-gap: 18px;
