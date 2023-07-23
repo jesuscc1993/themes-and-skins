@@ -1,6 +1,6 @@
 :root {
   --cover-border-radius: 3.5px;
-  --cover-width: 130px;
+  --cover-width: 142px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
   --context-menu-padding: 6px 12px;
 }
@@ -56,7 +56,7 @@
 }
 
 [class*='libraryhome_LibraryHome'] {
-  padding: 12px 4px 32px 10px;
+  padding: 8px 4px 32px 10px;
 }
 /* */
 
