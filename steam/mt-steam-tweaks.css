@@ -138,7 +138,7 @@
 /* fade uninstalled games */
 [class*='appportrait_Draggable'] [class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom']:not([class*='appportrait_BarDownloading']) {
   background: #24282fCC;
-  border-radius: var(--cover-border-radius);
+  border-radius: calc(var(--cover-border-radius) - 0.5px);
   bottom: 0;
   height: 100%;
   pointer-events: none;
