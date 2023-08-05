@@ -38,10 +38,13 @@
 }
 [class*='library_LeftListSizableContainer'] {
   height: 100%;
+  max-width: none;
+  min-width: 0;
   padding-right: 16px;
+  width: 272px;
 }
 [class*='library_LeftListSizableContainer']:not(:hover) {
-  margin-left: -19%;
+  margin-left: -272px;
 }
 
 [class*='libraryhome_UpdatesContainer'] {
