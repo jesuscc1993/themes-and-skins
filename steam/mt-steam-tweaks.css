@@ -142,7 +142,8 @@
 /* disable cover hover */
 [class*='HoversEnabled'] [class*='LibraryItemBox'],
 [class*='HoversEnabled'] [class*='LibraryItemBox'] [class*='libraryassetimage_Image_'],
-[class*='HoversEnabled'] [class*='LibraryItemBox'] [class*='appportrait_FooterBlurImage_'] {
+[class*='HoversEnabled'] [class*='LibraryItemBox'] [class*='appportrait_FooterBlurImage_'],
+[class*='appportrait_Draggable_']:hover [class*='appportrait_AppPortraitBannerContainer_'] {
   transform: none !important;
 }
 
