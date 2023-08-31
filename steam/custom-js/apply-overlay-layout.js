@@ -3,7 +3,7 @@ const SCREEN_HEIGHT = 1080;
 const FOOTER_HEIGHT = 64;
 const VIEWPORT_HEIGHT = SCREEN_HEIGHT - FOOTER_HEIGHT;
 
-const SIDEBAR_WIDTH = SCREEN_WIDTH / 5;
+const SIDEBAR_WIDTH = SCREEN_WIDTH / 3.75;
 const CENTER_WIDTH = SCREEN_WIDTH - SIDEBAR_WIDTH * 2;
 
 const LEFT_X = 0;
@@ -20,8 +20,8 @@ const processWindow = (windowName, width, x) => {
 // left
 processWindow("GameOverview", SIDEBAR_WIDTH, LEFT_X);
 // center
-processWindow("Achievements", CENTER_WIDTH, CENTER_X);
+// processWindow("Achievements", CENTER_WIDTH, CENTER_X);
 processWindow("OverlayBrowser_Discussions", CENTER_WIDTH, CENTER_X);
 processWindow("OverlayBrowser_Guides", CENTER_WIDTH, CENTER_X);
 // right
-// processWindow("Achievements", SIDEBAR_WIDTH, RIGHT_X);
+processWindow("Achievements", SIDEBAR_WIDTH, RIGHT_X);
