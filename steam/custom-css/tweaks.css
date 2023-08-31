@@ -175,3 +175,9 @@
 [class*="appportrait_UninstalledBarBottom"] {
   margin-top: 0 !important;
 }
+
+/* reduce overlay toolbar spacing */
+[class*="steamdesktopoverlay_ToolbarContainer_"][class*='steamdesktopoverlay_LocationBottom_'] {
+  bottom: 7px;
+}
+
