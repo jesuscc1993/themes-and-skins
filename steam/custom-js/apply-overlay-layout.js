@@ -20,7 +20,8 @@ const processWindow = (windowName, width, x) => {
 // left
 processWindow("GameOverview", SIDEBAR_WIDTH, LEFT_X);
 // center
+processWindow("Achievements", CENTER_WIDTH, CENTER_X);
 processWindow("OverlayBrowser_Discussions", CENTER_WIDTH, CENTER_X);
 processWindow("OverlayBrowser_Guides", CENTER_WIDTH, CENTER_X);
 // right
-processWindow("Achievements", SIDEBAR_WIDTH, RIGHT_X);
+// processWindow("Achievements", SIDEBAR_WIDTH, RIGHT_X);
