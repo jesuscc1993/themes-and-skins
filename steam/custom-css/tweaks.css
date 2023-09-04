@@ -78,28 +78,29 @@
 /* */
 
 /* custom cover sizes */
-[class*="libraryhomeshowcases_ShowcaseGrid"] {
+[class*='libraryhomeshowcases_ShowcaseGrid'] {
   gap: var(--grid-gap) !important;
   grid-template-columns: repeat(auto-fill, var(--cover-width)) !important;
   justify-content: center !important;
   padding: 8px 0 !important;
 }
-[class*="libraryhomeshowcases_ShowcaseGrid"][style*='grid-auto-rows: 222px;'] {
+[class*='libraryhomeshowcases_ShowcaseGrid'][style*='grid-auto-rows: 222px;'] {
   grid-auto-rows: var(--cover-height) !important;
 }
-[class*="libraryhomeshowcases_ShowcaseGrid"][style*='grid-auto-rows: 148px;'] {
+[class*='libraryhomeshowcases_ShowcaseGrid'][style*='grid-auto-rows: 148px;'] {
   grid-auto-rows: var(--cover-width) !important;
 }
-[class*="cssgrid_Container"] {
+[class*='cssgrid_Container'] {
   height: auto !important;
 }
-[class*="libraryhomeshowcases_ShowcaseOuter"] {
+[class*='libraryhomeshowcases_ShowcaseOuter'] {
   padding-bottom: 24px;
 }
 [class*='appportrait_LibraryItemBox'] {
   border-width: 0 !important;
 }
-[class*='allcollections_Collection_'] [class*='allcollections_CollectionLabel_'] {
+[class*='allcollections_Collection_']
+  [class*='allcollections_CollectionLabel_'] {
   width: calc(100% - 20px);
 }
 /* */
@@ -112,11 +113,13 @@
 [class*='appportrait_LibraryItemBoxShine'] {
   display: none !important;
 }
-[class*='appportrait_Draggable'] [class*='appportrait_LibraryItemBoxSubscript'] {
+[class*='appportrait_Draggable']
+  [class*='appportrait_LibraryItemBoxSubscript'] {
   transition: 500ms;
   pointer-events: none;
 }
-[class*='appportrait_Draggable']:not(:hover) [class*='appportrait_LibraryItemBoxSubscript'] {
+[class*='appportrait_Draggable']:not(:hover)
+  [class*='appportrait_LibraryItemBoxSubscript'] {
   opacity: 0;
 }
 /* */
@@ -127,23 +130,24 @@
   flex-direction: column;
 }
 
-[class*='libraryhome_LibraryHome']
-  > div
-  > [class*='libraryhomeshowcases_Sortable'] {
+[class*='libraryhome_LibraryHome'] > div > [class*='libraryhomeshowcases_Sortable'] {
   order: 0;
 }
-[class*='libraryhome_LibraryHome']
-  > div
-  > *:not([class*='libraryhomeshowcases_Sortable']) {
+[class*='libraryhome_LibraryHome'] > div > *:not([class*='libraryhomeshowcases_Sortable']) {
   order: 1;
 }
 /* */
 
 /* disable cover hover */
 [class*='HoversEnabled'] [class*='LibraryItemBox'],
-[class*='HoversEnabled'] [class*='LibraryItemBox'] [class*='libraryassetimage_Image_'],
-[class*='HoversEnabled'] [class*='LibraryItemBox'] [class*='appportrait_FooterBlurImage_'],
-[class*='appportrait_Draggable_']:hover [class*='appportrait_AppPortraitBannerContainer_'] {
+[class*='HoversEnabled']
+  [class*='LibraryItemBox']
+  [class*='libraryassetimage_Image_'],
+[class*='HoversEnabled']
+  [class*='LibraryItemBox']
+  [class*='appportrait_FooterBlurImage_'],
+[class*='appportrait_Draggable_']:hover
+  [class*='appportrait_AppPortraitBannerContainer_'] {
   transform: none !important;
 }
 
@@ -153,15 +157,22 @@
 }
 
 /* fade uninstalled games */
-[class*='appportrait_Draggable'] [class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom']:not([class*='appportrait_BarDownloading']) {
-  background: #24282fCC;
+[class*='appportrait_Draggable']
+  [class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom']:not(
+    [class*='appportrait_BarDownloading']
+  ) {
+  background: #24282fcc;
   border-radius: calc(var(--cover-border-radius) - 0.5px);
   bottom: 0;
   height: 100%;
   pointer-events: none;
   z-index: 12;
 }
-[class*='HoversEnabled'] [class*='LibraryItemBox']:hover:not([class*='appportrait_Landscape_'] [class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom']) {
+[class*='HoversEnabled']
+  [class*='LibraryItemBox']:hover:not(
+    [class*='appportrait_Landscape_']
+      [class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom']
+  ) {
   transform: rotateX(3deg) translateZ(15px);
 }
 
@@ -172,12 +183,29 @@
 }
 
 /* fix uninstalled games */
-[class*="appportrait_UninstalledBarBottom"] {
+[class*='appportrait_UninstalledBarBottom'] {
   margin-top: 0 !important;
 }
 
 /* reduce overlay toolbar spacing */
-[class*="steamdesktopoverlay_ToolbarContainer_"][class*='steamdesktopoverlay_LocationBottom_'] {
+[class*='steamdesktopoverlay_ToolbarContainer_'][class*='steamdesktopoverlay_LocationBottom_'] {
   bottom: 7px;
 }
 
+/* hide overlay toolbar unless hovered */
+/*[class*="steamdesktopoverlay_ToolbarContainer_"][class*='steamdesktopoverlay_LocationBottom_'] {
+  bottom: 8px;
+  margin-bottom: -72px;
+  padding-top: 8px;
+  transition: 150ms;
+}
+[class*="steamdesktopoverlay_ToolbarContainer_"][class*='steamdesktopoverlay_LocationBottom_']:hover {
+  margin-bottom: 0;
+}
+
+[class*="steamdesktopoverlay_Toolbar_"] {
+  background: #000E;
+  border-radius: 8px;
+  padding: 4px;
+}*/
+/* */
