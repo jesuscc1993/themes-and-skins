@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<skin>
+  <info>
+    <author>MetalTxus</author>
+    <website>https://github.com/jesuscc1993</website>
+  </info>
+
+  <osds>
+    <volume background="OSD/background.png" defaultUnits="100">
+      <meter
+        type="Text"
+        format="[[PERC]]"
+        font="Segoe UI"
+        size="18"
+        color="FFFFFF"
+        align="center"
+        x="328"
+        y="12"
+      />
+      <meter
+        type="HorizontalBar"
+        image="OSD/bar.png"
+        x="66"
+        y="28"
+      />
+      <meter
+        type="VerticalSliderKnob"
+        image="OSD/knob.png"
+        x="66"
+        y="17"
+        width="232"
+        height="8"
+      />
+      <iconset location="Notification Icons" />
+      <sound file="sound.wav" />
+    </volume>
+
+    <mute background="OSD/mute.png" />
+    <eject background="OSD/eject.png" />
+  </osds>
+
+  <sliders>
+    <volume background="Slider/background.png">
+      <slider
+        type="horizontal"
+        image="Slider/knob.png"
+        x="66"
+        y="17"
+        width="232"
+        height="8"
+      />
+    </volume>
+  </sliders>
+</skin>
