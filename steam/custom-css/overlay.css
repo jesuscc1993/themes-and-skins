@@ -1,0 +1,33 @@
+/* reduce overlay toolbar spacing */
+[class*='steamdesktopoverlay_ToolbarContainer_'][class*='steamdesktopoverlay_LocationBottom_'] {
+  bottom: 7px;
+}
+
+/* hide achievement date in sidebar */
+[class*='achievementslist_AchievementListItemBase_'] [class*='achievementslist_Container_'] [class*='achievementslist_Right_'] {
+  display: none;
+}
+
+/* tweaks to achievements for better responsiveness */
+[class*='achievementslist_AchievementListItemBase_'] [class*='achievementslist_Container_'] {
+  gap: 12px;
+  padding: 4px 12px;
+}
+
+/* hide toolbar unless hovered */
+/*[class*="steamdesktopoverlay_ToolbarContainer_"][class*='steamdesktopoverlay_LocationBottom_'] {
+  bottom: 8px;
+  margin-bottom: -72px;
+  padding-top: 8px;
+  transition: 150ms;
+}
+[class*="steamdesktopoverlay_ToolbarContainer_"][class*='steamdesktopoverlay_LocationBottom_']:hover {
+  margin-bottom: 0;
+}
+
+[class*="steamdesktopoverlay_Toolbar_"] {
+  background: #000E;
+  border-radius: 8px;
+  padding: 4px;
+}*/
+/* */

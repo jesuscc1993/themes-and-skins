@@ -1,0 +1,28 @@
+:root {
+  --context-menu-padding: 6px 12px;
+}
+
+/* evenly sized header buttons */
+[class*='titlebarcontrols_Button'] {
+  padding: 0;
+}
+
+/* hide big picture toggle */
+[class*='titlebarcontrols_AccountMenu'] {
+  margin-right: 0 !important;
+}
+[class*='titlebarcontrols_GamepadUIToggle'] {
+  display: none !important;
+}
+
+/* always hide address bar */
+[class*='steamdesktop_URLBar_'],
+[class*='steamdesktop_URLBarReplacement_'] {
+  display: none !important;
+}
+
+/* reduce context menu padding */
+.DesktopUI [class*='contextmenu_contextMenuItem'],
+[class*='contextmenu_ForceDesktop'] [class*='contextmenu_contextMenuItem'] {
+  padding: var(--context-menu-padding);
+}

@@ -3,20 +3,6 @@
   --cover-width: 140px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
   --grid-gap: 18px;
-  --context-menu-padding: 6px 12px;
-}
-
-/* evenly sized header buttons */
-[class*='titlebarcontrols_Button'] {
-  padding: 0;
-}
-
-/* hide big picture toggle */
-[class*='titlebarcontrols_AccountMenu'] {
-  margin-right: 0 !important;
-}
-[class*='titlebarcontrols_GamepadUIToggle'] {
-  display: none !important;
 }
 
 /* hide favorites collection */
@@ -33,12 +19,6 @@
 [class*='steamdesktop_URLBar_'],
 [class*='steamdesktop_URLBarReplacement_'] {
   display: none !important;
-}
-
-/* reduce context menu padding */
-.DesktopUI [class*='contextmenu_contextMenuItem'],
-[class*='contextmenu_ForceDesktop'] [class*='contextmenu_contextMenuItem'] {
-  padding: var(--context-menu-padding);
 }
 
 /* hide news and sidebar until hovered */
@@ -186,26 +166,3 @@
 [class*='appportrait_UninstalledBarBottom'] {
   margin-top: 0 !important;
 }
-
-/* reduce overlay toolbar spacing */
-[class*='steamdesktopoverlay_ToolbarContainer_'][class*='steamdesktopoverlay_LocationBottom_'] {
-  bottom: 7px;
-}
-
-/* hide overlay toolbar unless hovered */
-/*[class*="steamdesktopoverlay_ToolbarContainer_"][class*='steamdesktopoverlay_LocationBottom_'] {
-  bottom: 8px;
-  margin-bottom: -72px;
-  padding-top: 8px;
-  transition: 150ms;
-}
-[class*="steamdesktopoverlay_ToolbarContainer_"][class*='steamdesktopoverlay_LocationBottom_']:hover {
-  margin-bottom: 0;
-}
-
-[class*="steamdesktopoverlay_Toolbar_"] {
-  background: #000E;
-  border-radius: 8px;
-  padding: 4px;
-}*/
-/* */

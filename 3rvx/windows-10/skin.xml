@@ -21,7 +21,7 @@
         type="HorizontalBar"
         image="OSD/bar.png"
         x="66"
-        y="28"
+        y="27"
       />
       <meter
         type="VerticalSliderKnob"
@@ -40,13 +40,13 @@
   </osds>
 
   <sliders>
-    <volume background="Slider/background.png">
+    <volume background="Control/background.png">
       <slider
         type="horizontal"
-        image="Slider/knob.png"
+        image="Control/knob.png"
         x="66"
         y="17"
-        width="190"
+        width="232"
         height="8"
       />
     </volume>
