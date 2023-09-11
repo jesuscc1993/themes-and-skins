@@ -23,12 +23,12 @@ const processWindows = (windowNames, width, height, x) => {
   });
 }
 
-const processLeftSidebars = (windowNames) => {
+export const processLeftSidebars = (windowNames) => {
   processWindows(windowNames, SIDEBAR_WIDTH, SCREEN_HEIGHT, LEFT_X);
 }
-const processCenterWindows = (windowNames) => {
+export const processCenterWindows = (windowNames) => {
   processWindows(windowNames, CENTER_WIDTH, VIEWPORT_HEIGHT, CENTER_X);
 }
-const processRightSidebars = (windowNames) => {
+export const processRightSidebars = (windowNames) => {
   processWindows(windowNames, SIDEBAR_WIDTH, SCREEN_HEIGHT, RIGHT_X);  
 }

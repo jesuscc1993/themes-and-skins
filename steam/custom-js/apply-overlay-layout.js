@@ -1,4 +1,10 @@
-const leftSidebars = ['riends', 'GameOverview'];
+import {
+  processLeftSidebars,
+  processCenterWindows,
+  processRightSidebars
+} from './common/overlay-functions.js';
+
+const leftSidebars = ['GameOverview'];
 
 const centerWindows = [
   // "ControllerConfigurator",
