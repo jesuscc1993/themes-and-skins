@@ -1,28 +1,31 @@
 import {
+  processCenterColumns,
   processLeftSidebars,
-  processCenterWindows,
-  processRightSidebars
+  processRightSidebars,
+  centerWindows,
 } from './common/overlay-functions.js';
 
 const leftSidebars = ['GameOverview'];
 
-const centerWindows = [
-  // "ControllerConfigurator",
+const centerColumns = [
   'GameNotes',
   'OverlayBrowser_Browser',
   'OverlayBrowser_Discussions',
   'OverlayBrowser_Guides',
   'OverlayBrowser_Workshop',
-  // "Settings"
 ];
 
 const rightSidebars = ['Achievements'];
+
+const centeredWindows = ['OverlayTimer', 'Settings'];
 
 const run = () => {
   console.log(`Opened ${window.name}.`);
 
   processLeftSidebars(leftSidebars);
-  processCenterWindows(centerWindows);
+  processCenterColumns(centerColumns);
   processRightSidebars(rightSidebars);
+
+  centerWindows(centeredWindows);
 };
 run();
