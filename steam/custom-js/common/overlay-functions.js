@@ -12,7 +12,7 @@ const CENTER_X = SIDEBAR_WIDTH;
 const RIGHT_X = SCREEN_WIDTH - SIDEBAR_WIDTH;
 /* end: columns */
 
-const resizeWindow = (width, height, x = 0, y = 0) => {
+const resizeWindow = (width, height) => {
   if (width !== undefined && height !== undefined) {
     SteamClient.Window.ResizeTo(width, height, 1);
     console.log(`Resized window "${window.name}" to ${width}x${height}.`);
