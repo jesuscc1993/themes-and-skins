@@ -166,3 +166,9 @@
 [class*='appportrait_UninstalledBarBottom'] {
   margin-top: 0 !important;
 }
+
+/* remove game header blur */
+[class*='sharedappdetailsheader_ImgSrc_'] {
+  max-width: none;
+  -webkit-mask-image: none;
+}
