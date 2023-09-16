@@ -1,17 +1,20 @@
 :root {
   --cover-border-radius: 4px;
-  --cover-width: 140px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
+  --cover-width: 140px;
+  --game-header-height: 256px;
   --grid-gap: 18px;
 }
 
 /* hide favorites collection */
-[class*='libraryhomeshowcases_ShowcaseGrid_'][style*='grid-auto-rows: 148px;'] > [class*='allcollections_Collection_']:first-of-type {
+[class*='libraryhomeshowcases_ShowcaseGrid_'][style*='grid-auto-rows: 148px;']
+  > [class*='allcollections_Collection_']:first-of-type {
   display: none !important;
 }
 
 /* hide soundtracks collection */
-[class*='libraryhomeshowcases_ShowcaseGrid_'][style*='grid-auto-rows: 148px;'] > [class*='allcollections_Collection_']:last-of-type {
+[class*='libraryhomeshowcases_ShowcaseGrid_'][style*='grid-auto-rows: 148px;']
+  > [class*='allcollections_Collection_']:last-of-type {
   display: none !important;
 }
 
@@ -110,11 +113,26 @@
   flex-direction: column;
 }
 
-[class*='libraryhome_LibraryHome'] > div > [class*='libraryhomeshowcases_Sortable'] {
+[class*='libraryhome_LibraryHome']
+  > div
+  > [class*='libraryhomeshowcases_Sortable'] {
   order: 0;
 }
-[class*='libraryhome_LibraryHome'] > div > *:not([class*='libraryhomeshowcases_Sortable']) {
+[class*='libraryhome_LibraryHome']
+  > div
+  > *:not([class*='libraryhomeshowcases_Sortable']) {
   order: 1;
+}
+/* */
+
+/* resize header */
+[class*='sharedappdetailsheader_TopCapsule_'],
+[class*='sharedappdetailsheader_HeaderBackgroundImage'] {
+  max-height: calc(var(--game-header-height) - 64px) !important;
+}
+[class*='sharedappdetailsheader_ImgContainer_'],
+[class*='sharedappdetailsheader_ImgSrc_'] {
+  height: var(--game-header-height);
 }
 /* */
 
