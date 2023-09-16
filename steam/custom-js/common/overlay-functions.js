@@ -36,7 +36,7 @@ const centerWindow = (windowName) => {
   }
 };
 
-const processWindows = (windowNames, width, height, x, y) => {
+const processWindows = (windowNames, width, height, x = 0, y = 0) => {
   windowNames.forEach((windowName) => {
     if (window.name.includes(windowName)) {
       resizeWindow(width, height);
