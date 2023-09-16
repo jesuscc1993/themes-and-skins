@@ -162,6 +162,11 @@
   display: none;
 }
 
+/* fix recent section spacing */
+[class*='libraryhomerecentgames_RecentGames_'][style*='height'] {
+  margin-bottom: -30px;
+}
+
 /* fix uninstalled games */
 [class*='appportrait_UninstalledBarBottom'] {
   margin-top: 0 !important;
