@@ -4,6 +4,7 @@
   --cover-width: 140px;
   --game-header-height: 256px;
   --grid-gap: 18px;
+  --library-section-gap: 8px;
 }
 
 /* hide favorites collection */
@@ -24,7 +25,8 @@
   display: none !important;
 }
 
-/* hide news and sidebar until hovered */
+/* hide news, sidebar and bottom bar until hovered */
+[class*='bottombar_BottomBarContainer'],
 [class*='library_LeftListSizableContainer'],
 [class*='libraryhome_UpdatesContainer'] {
   position: absolute;
@@ -32,6 +34,18 @@
   transition-duration: 150ms;
   z-index: 100;
 }
+
+[class*='bottombar_BottomBarContainer'] {
+  --height: 50px;
+  bottom: 0;
+  height: var(--height);
+  padding-top: 24px;
+  width: 100%;
+}
+[class*='bottombar_BottomBarContainer']:not(:hover) {
+  margin-bottom: calc(var(--height) * -1);
+}
+
 [class*='library_LeftListSizableContainer'] {
   height: 100%;
   max-width: none;
@@ -76,9 +90,6 @@
 }
 [class*='cssgrid_Container'] {
   height: auto !important;
-}
-[class*='libraryhomeshowcases_ShowcaseOuter'] {
-  padding-bottom: 24px;
 }
 [class*='appportrait_LibraryItemBox'] {
   border-width: 0 !important;
@@ -165,6 +176,11 @@
 [class*='appportrait_Draggable_']:hover
   [class*='appportrait_AppPortraitBannerContainer_'] {
   transform: none !important;
+}
+
+/* custom library section spacing */
+[class*='libraryhomeshowcases_ShowcaseOuter'] {
+  padding-bottom: var(--library-section-gap);
 }
 
 /* cover border radius */
