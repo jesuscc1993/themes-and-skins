@@ -115,6 +115,10 @@
   width: var(--cover-width) !important;
   height: var(--cover-height) !important;
 }
+[class*='libraryhomerecentgames_RecentGameMediaContainer_']
+  [class*='libraryassetimage_Container_'][class*='libraryassetimage_LandscapeImage'] {
+  padding-top: 134px;
+}
 /* */
 
 /* hide game card badges until hovered */
