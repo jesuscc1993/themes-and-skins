@@ -117,7 +117,7 @@
 }
 [class*='libraryhomerecentgames_RecentGameMediaContainer_']
   [class*='libraryassetimage_Container_'][class*='libraryassetimage_LandscapeImage'] {
-  padding-top: 134px;
+  padding-top: calc(var(--cover-height) - 76px);
 }
 /* */
 
