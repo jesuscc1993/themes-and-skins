@@ -2,6 +2,7 @@
   --cover-border-radius: 4px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
   --cover-width: 140px;
+  --cover-width-landscape: calc(var(--cover-width) * 2 + var(--grid-gap));
   --game-header-height: 256px;
   --grid-gap: 18px;
   --library-section-gap: 8px;
@@ -108,7 +109,7 @@
   margin-right: var(--grid-gap);
 }
 [class*='libraryhomerecentgames_RecentGameMediaContainer_'][style*='width: 311.984px'] {
-  width: calc(var(--cover-width) * 2 + var(--grid-gap)) !important;
+  width: var(--cover-width-landscape) !important;
   height: var(--cover-height) !important;
 }
 [class*='libraryhomerecentgames_RecentGameMediaContainer_'][style*='width: 148px;'] {
