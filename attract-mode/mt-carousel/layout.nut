@@ -17,13 +17,13 @@ class UserConfig </ help="" />{
   height="256";
 
   </ label="Transition Time", help="The amount of time (in milliseconds) that it takes to scroll to another carousel entry", order=5 />
-  ttime="150";
+  transition_time="150";
 }
 
 fe.load_module("conveyor");
 
 local my_config = fe.get_config();
-local transition_ms = my_config["ttime"].tointeger();
+local transition_ms = my_config["transition_time"].tointeger();
 local carouselGap = my_config[ "carouselGap" ].tointeger();
 local height = my_config[ "height" ].tointeger();
 local width = my_config[ "width" ].tointeger();
@@ -74,107 +74,107 @@ class Carousel extends Conveyor {
 
   function on_signal(sig) {
     switch (sig) {
-    case "exit":
-    case "exit_no_menu":
-    case "toggle_mute":
-    case "toggle_flip":
-    case "toggle_rotate_left":
-    case "toggle_rotate_right":
-      break;
-    case "select":
-    default:
-      // Correct the list index if it doesn't align with
-      // the game our frame is on
-      //
-      enabled=false; // turn conveyor off for this switch
-      local frame_index = get_sel();
-      fe.list.index += frame_index - selection_index;
+      case "exit":
+      case "exit_no_menu":
+      case "toggle_mute":
+      case "toggle_flip":
+      case "toggle_rotate_left":
+      case "toggle_rotate_right":
+        break;
+      case "select":
+      default:
+        // Correct the list index if it doesn't align with
+        // the game our frame is on
+        //
+        enabled=false; // turn conveyor off for this switch
+        local frame_index = get_sel();
+        fe.list.index += frame_index - selection_index;
 
-      set_selection(frame_index);
-      update_frame();
-      enabled=true; // re-enable conveyor
+        set_selection(frame_index);
+        update_frame();
+        enabled=true; // re-enable conveyor
 
-      break;
+        break;
     }
 
     return false;
   }
 
-  function on_transition(ttype, var, ttime) {
-    switch (ttype) {
-    case Transition.StartLayout:
-    case Transition.FromGame:
-      if (ttime < transition_ms) {
-        for (local i=0; i< m_objs.len(); i++) {
-          local r = i % rows;
-          local c = i / rows;
-          local num = rows + cols - 2;
-          if (num < 1) {
-            num = 1;
+  function on_transition(transition_type, var, transition_time) {
+    switch (transition_type) {
+      case Transition.StartLayout:
+      case Transition.FromGame:
+        if (transition_time < transition_ms) {
+          for (local i=0; i< m_objs.len(); i++) {
+            local r = i % rows;
+            local c = i / rows;
+            local num = rows + cols - 2;
+            if (num < 1) {
+              num = 1;
+            }
+
+            local temp = 510 * (num - r - c) / num * transition_time / transition_ms;
+            m_objs[i].set_alpha((temp > 255) ? 255 : temp);
           }
 
-          local temp = 510 * (num - r - c) / num * ttime / transition_ms;
-          m_objs[i].set_alpha((temp > 255) ? 255 : temp);
+          frame.alpha = 255 * transition_time / transition_ms;
+          return true;
         }
 
-        frame.alpha = 255 * ttime / transition_ms;
-        return true;
-      }
+        local old_alpha = m_objs[ m_objs.len()-1 ].m_art.alpha;
 
-      local old_alpha = m_objs[ m_objs.len()-1 ].m_art.alpha;
+        foreach (o in m_objs) {
+          o.set_alpha(255);
+        }
 
-      foreach (o in m_objs) {
-        o.set_alpha(255);
-      }
+        frame.alpha = 255;
 
-      frame.alpha = 255;
+        if (old_alpha != 255) {
+          return true;
+        }
 
-      if (old_alpha != 255) {
-        return true;
-      }
+        break;
 
-      break;
+      case Transition.ToGame:
+      case Transition.EndLayout:
+        if (transition_time < transition_ms) {
+          for (local i=0; i< m_objs.len(); i++) {
+            local r = i % rows;
+            local c = i / rows;
+            local num = rows + cols - 2;
+            if (num < 1) {
+              num = 1;
+            }
 
-    case Transition.ToGame:
-    case Transition.EndLayout:
-      if (ttime < transition_ms) {
-        for (local i=0; i< m_objs.len(); i++) {
-          local r = i % rows;
-          local c = i / rows;
-          local num = rows + cols - 2;
-          if (num < 1) {
-            num = 1;
+            local temp = 255 - 510 * (num - r - c) / num * transition_time / transition_ms;
+            m_objs[i].set_alpha((temp < 0) ? 0 : temp);
           }
-
-          local temp = 255 - 510 * (num - r - c) / num * ttime / transition_ms;
-          m_objs[i].set_alpha((temp < 0) ? 0 : temp);
+          frame.alpha = 255 - 255 * transition_time / transition_ms;
+          return true;
         }
-        frame.alpha = 255 - 255 * ttime / transition_ms;
-        return true;
-      }
 
-      local old_alpha = m_objs[ m_objs.len()-1 ].m_art.alpha;
+        local old_alpha = m_objs[ m_objs.len()-1 ].m_art.alpha;
 
-      foreach (o in m_objs) {
-        o.set_alpha(0);
-      }
+        foreach (o in m_objs) {
+          o.set_alpha(0);
+        }
 
-      frame.alpha = 0;
+        frame.alpha = 0;
 
-      if (old_alpha != 0) {
-        return true;
-      }
+        if (old_alpha != 0) {
+          return true;
+        }
 
-      break;
+        break;
     }
 
-    return base.on_transition(ttype, var, ttime);
+    return base.on_transition(transition_type, var, transition_time);
   }
 }
 
-::carouselc <- Carousel();
+::carousel <- Carousel();
 
-class MySlot extends ConveyorSlot {
+class Carousel extends ConveyorSlot {
   m_num = 0;
   m_shifted = false;
   m_art = null;
@@ -208,8 +208,8 @@ class MySlot extends ConveyorSlot {
       m_art.y = carouselY + (progress * cols - c) + carouselHalfGap;
 
     } else {
-      local prog = ::carouselc.transition_progress;
-      if (prog > ::carouselc.transition_swap_point) {
+      local prog = ::carousel.transition_progress;
+      if (prog > ::carousel.transition_swap_point) {
         if (var > 0) c++;
         else c--;
       }
@@ -241,12 +241,12 @@ class MySlot extends ConveyorSlot {
 
 local my_array = [];
 for (local i = 0; i < rows * paddedCols; i++) {
-  my_array.push(MySlot(i));
+  my_array.push(Carousel(i));
 }
 
-carouselc.set_slots(my_array, carouselc.get_sel());
-carouselc.frame=fe.add_image("frame.png", width * 2, height * 2, width, height);
-carouselc.frame.preserve_aspect_ratio = true;
+carousel.set_slots(my_array, carousel.get_sel());
+carousel.frame=fe.add_image("frame.png", width * 2, height * 2, width, height);
+carousel.frame.preserve_aspect_ratio = true;
 
 local title = fe.add_text(
   "[DisplayName]/[FilterName]",
@@ -257,20 +257,20 @@ local title = fe.add_text(
 );
 title.align = Align.Left;
 
-carouselc.num_t = fe.add_text(
+carousel.num_t = fe.add_text(
   "[ListEntry]/[ListSize]",
   fe.layout.width * 7/8,
   0,
   fe.layout.width * 1/8,
   fe.layout.height / 40
 );
-carouselc.num_t.align = Align.Right;
+carousel.num_t.align = Align.Right;
 
-carouselc.name_t =  fe.add_text(
+carousel.name_t =  fe.add_text(
   "[Title]",
   0,
   fe.layout.height - carouselGap - fe.layout.height / 40,
   fe.layout.width, fe.layout.height / 40
 );
 
-carouselc.update_frame();
+carousel.update_frame();
