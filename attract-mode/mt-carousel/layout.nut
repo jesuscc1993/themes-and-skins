@@ -29,13 +29,13 @@ local height = my_config[ "height" ].tointeger();
 local width = my_config[ "width" ].tointeger();
 
 local cols = fe.layout.width / width;
-local paddedCols = cols + 1;
+local paddedCols = cols + 2;
 local rows = 1;
 
 local carouselHalfGap = carouselGap / 2;
 local carouselY = (fe.layout.height - height) / 2;
-// local carouselX = (fe.layout.width - (width * paddedCols) - (carouselGap * (paddedCols - 1))) / 2;
-local carouselX = 0;
+// local carouselX = (fe.layout.width - paddedCols * (width + carouselGap)) / 2;
+local carouselX = - (width + carouselGap) * 3 / 4;
 
 class Carousel extends Conveyor
 {
@@ -49,8 +49,7 @@ class Carousel extends Conveyor
   {
     base.constructor();
 
-    sel_x = cols / 2;
-    sel_y = rows / 2;
+    sel_x = paddedCols / 2;
 
     stride = fe.layout.page_size = rows;
     fe.add_signal_handler( this, "on_signal" );
@@ -232,7 +231,7 @@ class MySlot extends ConveyorSlot
 
       if ( var > 0 ) prog *= -1;
 
-      m_art.x = ( c + prog ) * width + carouselHalfGap;
+      m_art.x = carouselX + ( c + prog ) * width + carouselHalfGap;
       m_art.y = carouselY + r * height + carouselHalfGap;
     }
   }
