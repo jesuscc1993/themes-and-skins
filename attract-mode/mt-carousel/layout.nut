@@ -246,7 +246,7 @@ for (local i = 0; i < rows * paddedCols; i++) {
 
 carousel.set_slots(my_array, carousel.get_sel());
 carousel.frame=fe.add_image("frame.png", width * 2, height * 2, width, height);
-carousel.frame.preserve_aspect_ratio = true;
+// carousel.frame.preserve_aspect_ratio = true;
 
 local title = fe.add_text(
   "[DisplayName]/[FilterName]",
