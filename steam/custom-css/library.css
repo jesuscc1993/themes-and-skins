@@ -1,4 +1,5 @@
 :root {
+  --banner-border-radius: 2px;
   --cover-border-radius: 4px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
   --cover-width: 140px;
@@ -233,4 +234,9 @@
 [class*='sharedappdetailsheader_ImgSrc_'] {
   max-width: none;
   -webkit-mask-image: none;
+}
+
+/* round game banners */
+[class*="appportrait_AppPortraitBanner_"] {
+  border-radius: var(--banner-border-radius);
 }
