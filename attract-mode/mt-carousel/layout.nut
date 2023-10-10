@@ -4,19 +4,19 @@
 //
 ///////////////////////////////////////////////////
 class UserConfig </ help="" />{
-  </ label="Artwork Type", help="Artwork to display", options="snap,marquee,flyer,wheel", order=1 />
+  </ label="Artwork Type", help="Artwork to display", options="snap,marquee,flyer,wheel", per_display="true", order=1 />
   art="flyer";
   
-  </ label="Artwork Gap", help="Space in between artworks", order=2 />
+  </ label="Artwork Gap", help="Space in between artworks", per_display="true", order=2 />
   carouselGap="8";
   
-  </ label="Artwork Width", help="The width at which the artwork will be displayed", order=3 />
+  </ label="Artwork Width", help="The width at which the artwork will be displayed", per_display="true", order=3 />
   width="256";
 
-  </ label="Artwork Height", help="The height at which the artwork will be displayed", order=4 />
+  </ label="Artwork Height", help="The height at which the artwork will be displayed", per_display="true", order=4 />
   height="256";
 
-  </ label="Transition Time", help="The amount of time (in milliseconds) that it takes to scroll to another carousel entry", order=5 />
+  </ label="Transition Time", help="The amount of time (in milliseconds) that it takes to scroll to another carousel entry", per_display="true", order=5 />
   transition_time="150";
 }
 
