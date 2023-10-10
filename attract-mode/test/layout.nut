@@ -88,7 +88,6 @@ class Grid extends Conveyor
 		switch ( sig )	
 		{
 		case "left":
-		case "down":
       transition_swap_point=0.5;
       do_correction();
       fe.signal( "prev_game" );
@@ -96,7 +95,6 @@ class Grid extends Conveyor
 			return true;
 
 		case "right":
-		case "up":
       transition_swap_point=0.5;
       do_correction();
       fe.signal( "next_game" );
