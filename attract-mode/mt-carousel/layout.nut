@@ -5,7 +5,7 @@
 ///////////////////////////////////////////////////
 class UserConfig {
 	</ label="Background image", help="Backroung image", options="default", order=1 />
-  bg_img="default";
+  bg_img="default.png";
   
   </ label="Artwork Type", help="Artwork to display", options="snap,marquee,flyer,wheel", per_display="true", order=2 />
   art="flyer";
@@ -23,7 +23,6 @@ class UserConfig {
   transition_ms="150";
 }
 
-fe.load_module("fade");
 fe.load_module("conveyor");
 
 local my_config = fe.get_config();
@@ -33,7 +32,6 @@ local height = my_config["height"].tointeger();
 local width = my_config["width"].tointeger();
 local bg_img = my_config["bg_img"];
 
-local bg = FadeArt(bg_img, 0, 0, fe.layout.width, fe.layout.height);
 local cols = fe.layout.width / width;
 local paddedCols = cols + 2;
 local rows = 1;
@@ -42,6 +40,8 @@ local carousel_half_gap = carousel_gap / 2;
 local carousel_y = (fe.layout.height - height) / 2;
 // local carousel_x = (fe.layout.width - paddedCols * (width + carousel_gap)) / 2;
 local carousel_x = - (width + carousel_gap) * 3 / 4;
+
+fe.add_image(bg_img, 0, 0, fe.layout.width, fe.layout.height);
 
 class Carousel extends Conveyor {
   frame=null;
