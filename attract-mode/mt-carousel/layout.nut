@@ -4,20 +4,20 @@
 //
 ///////////////////////////////////////////////////
 class UserConfig {
-	</ label="Background image", help="Backroung image", options="default", order=1 />
+	</ label="Background image", help="Background image", options="default", order=1 />
   bg_img="default.png";
   
   </ label="Artwork Type", help="Artwork to display", options="snap,marquee,flyer,wheel", per_display="true", order=2 />
   art="flyer";
   
   </ label="Artwork Width", help="The width at which the artwork will be displayed", per_display="true", order=3 />
-  width="256";
+  artwork_width="256";
 
   </ label="Artwork Height", help="The height at which the artwork will be displayed", per_display="true", order=4 />
-  height="256";
+  artwork_height="256";
   
   </ label="Artwork Gap", help="Space in between artworks", per_display="true", order=5 />
-  carousel_gap="8";
+  artwork_gap="8";
 
   </ label="Transition Time", help="The amount of time (in milliseconds) that it takes to scroll to another carousel entry", per_display="true", order=6 />
   transition_ms="150";
@@ -27,19 +27,19 @@ fe.load_module("conveyor");
 
 local my_config = fe.get_config();
 local transition_ms = my_config["transition_ms"].tointeger();
-local carousel_gap = my_config["carousel_gap" ].tointeger();
-local height = my_config["height"].tointeger();
-local width = my_config["width"].tointeger();
+local artwork_gap = my_config["artwork_gap" ].tointeger();
+local artwork_height = my_config["artwork_height"].tointeger();
+local artwork_width = my_config["artwork_width"].tointeger();
 local bg_img = my_config["bg_img"];
 
-local cols = fe.layout.width / width;
+local cols = fe.layout.width / artwork_width;
 local paddedCols = cols + 2;
 local rows = 1;
 
-local carousel_half_gap = carousel_gap / 2;
-local carousel_y = (fe.layout.height - height) / 2;
-// local carousel_x = (fe.layout.width - paddedCols * (width + carousel_gap)) / 2;
-local carousel_x = - (width + carousel_gap) * 3 / 4;
+local artwork_half_gap = artwork_gap / 2;
+local carousel_y = (fe.layout.height - artwork_height) / 2;
+// local carousel_x = (fe.layout.width - paddedCols * (artwork_width + artwork_gap)) / 2;
+local carousel_x = - (artwork_width + artwork_gap) * 3 / 4;
 
 fe.add_image(bg_img, 0, 0, fe.layout.width, fe.layout.height);
 
@@ -60,8 +60,8 @@ class Carousel extends Conveyor {
   }
 
   function update_frame() {
-    frame.x = carousel_x + width * sel_x;
-    frame.y = carousel_y + height * sel_y;
+    frame.x = carousel_x + artwork_width * sel_x;
+    frame.y = carousel_y + artwork_height * sel_y;
     
     name_t.index_offset = num_t.index_offset = get_sel() - selection_index;  
   }
@@ -192,8 +192,8 @@ class Carousel extends ConveyorSlot {
       my_config["art"],
       0,
       0,
-      width - carousel_gap,
-      height - carousel_gap
+      artwork_width - artwork_gap,
+      artwork_height - artwork_gap
     );
     m_art.preserve_aspect_ratio = true;
     m_art.alpha = 0;
@@ -210,8 +210,8 @@ class Carousel extends ConveyorSlot {
     local c = m_num / rows;
 
     if (abs(var) < rows) {
-      m_art.x = carousel_x + c * width + carousel_half_gap;
-      m_art.y = carousel_y + (progress * cols - c) + carousel_half_gap;
+      m_art.x = carousel_x + c * artwork_width + artwork_half_gap;
+      m_art.y = carousel_y + (progress * cols - c) + artwork_half_gap;
 
     } else {
       local prog = ::carousel.transition_progress;
@@ -222,8 +222,8 @@ class Carousel extends ConveyorSlot {
 
       if (var > 0) prog *= -1;
 
-      m_art.x = carousel_x + (c + prog) * width + carousel_half_gap;
-      m_art.y = carousel_y + r * height + carousel_half_gap;
+      m_art.x = carousel_x + (c + prog) * artwork_width + artwork_half_gap;
+      m_art.y = carousel_y + r * artwork_height + artwork_half_gap;
     }
   }
 
@@ -251,7 +251,7 @@ for (local i = 0; i < rows * paddedCols; i++) {
 }
 
 carousel.set_slots(my_array, carousel.get_sel());
-carousel.frame=fe.add_image("frame.png", width * 2, height * 2, width, height);
+carousel.frame=fe.add_image("frame.png", artwork_width * 2, artwork_height * 2, artwork_width, artwork_height);
 // carousel.frame.preserve_aspect_ratio = true;
 
 local text_h = 32;
