@@ -3,39 +3,45 @@
 // Attract-Mode Frontend - Carousel layout
 //
 ///////////////////////////////////////////////////
-class UserConfig </ help="" />{
-  </ label="Artwork Type", help="Artwork to display", options="snap,marquee,flyer,wheel", per_display="true", order=1 />
-  art="flyer";
+class UserConfig {
+	</ label="Background image", help="Backroung image", options="default", order=1 />
+  bg_img="default";
   
-  </ label="Artwork Gap", help="Space in between artworks", per_display="true", order=2 />
-  carouselGap="8";
+  </ label="Artwork Type", help="Artwork to display", options="snap,marquee,flyer,wheel", per_display="true", order=2 />
+  art="flyer";
   
   </ label="Artwork Width", help="The width at which the artwork will be displayed", per_display="true", order=3 />
   width="256";
 
   </ label="Artwork Height", help="The height at which the artwork will be displayed", per_display="true", order=4 />
   height="256";
+  
+  </ label="Artwork Gap", help="Space in between artworks", per_display="true", order=5 />
+  carousel_gap="8";
 
-  </ label="Transition Time", help="The amount of time (in milliseconds) that it takes to scroll to another carousel entry", per_display="true", order=5 />
-  transition_time="150";
+  </ label="Transition Time", help="The amount of time (in milliseconds) that it takes to scroll to another carousel entry", per_display="true", order=6 />
+  transition_ms="150";
 }
 
+fe.load_module("fade");
 fe.load_module("conveyor");
 
 local my_config = fe.get_config();
-local transition_ms = my_config["transition_time"].tointeger();
-local carouselGap = my_config[ "carouselGap" ].tointeger();
-local height = my_config[ "height" ].tointeger();
-local width = my_config[ "width" ].tointeger();
+local transition_ms = my_config["transition_ms"].tointeger();
+local carousel_gap = my_config["carousel_gap" ].tointeger();
+local height = my_config["height"].tointeger();
+local width = my_config["width"].tointeger();
+local bg_img = my_config["bg_img"];
 
+local bg = FadeArt(bg_img, 0, 0, fe.layout.width, fe.layout.height);
 local cols = fe.layout.width / width;
 local paddedCols = cols + 2;
 local rows = 1;
 
-local carouselHalfGap = carouselGap / 2;
-local carouselY = (fe.layout.height - height) / 2;
-// local carouselX = (fe.layout.width - paddedCols * (width + carouselGap)) / 2;
-local carouselX = - (width + carouselGap) * 3 / 4;
+local carousel_half_gap = carousel_gap / 2;
+local carousel_y = (fe.layout.height - height) / 2;
+// local carousel_x = (fe.layout.width - paddedCols * (width + carousel_gap)) / 2;
+local carousel_x = - (width + carousel_gap) * 3 / 4;
 
 class Carousel extends Conveyor {
   frame=null;
@@ -54,8 +60,8 @@ class Carousel extends Conveyor {
   }
 
   function update_frame() {
-    frame.x = carouselX + width * sel_x;
-    frame.y = carouselY + height * sel_y;
+    frame.x = carousel_x + width * sel_x;
+    frame.y = carousel_y + height * sel_y;
     
     name_t.index_offset = num_t.index_offset = get_sel() - selection_index;  
   }
@@ -186,8 +192,8 @@ class Carousel extends ConveyorSlot {
       my_config["art"],
       0,
       0,
-      width - carouselGap,
-      height - carouselGap
+      width - carousel_gap,
+      height - carousel_gap
     );
     m_art.preserve_aspect_ratio = true;
     m_art.alpha = 0;
@@ -204,8 +210,8 @@ class Carousel extends ConveyorSlot {
     local c = m_num / rows;
 
     if (abs(var) < rows) {
-      m_art.x = carouselX + c * width + carouselHalfGap;
-      m_art.y = carouselY + (progress * cols - c) + carouselHalfGap;
+      m_art.x = carousel_x + c * width + carousel_half_gap;
+      m_art.y = carousel_y + (progress * cols - c) + carousel_half_gap;
 
     } else {
       local prog = ::carousel.transition_progress;
@@ -216,8 +222,8 @@ class Carousel extends ConveyorSlot {
 
       if (var > 0) prog *= -1;
 
-      m_art.x = carouselX + (c + prog) * width + carouselHalfGap;
-      m_art.y = carouselY + r * height + carouselHalfGap;
+      m_art.x = carousel_x + (c + prog) * width + carousel_half_gap;
+      m_art.y = carousel_y + r * height + carousel_half_gap;
     }
   }
 
@@ -248,29 +254,34 @@ carousel.set_slots(my_array, carousel.get_sel());
 carousel.frame=fe.add_image("frame.png", width * 2, height * 2, width, height);
 // carousel.frame.preserve_aspect_ratio = true;
 
+local text_h = 32;
+
+local title_y = 16;
 local title = fe.add_text(
   "[DisplayName]/[FilterName]",
   0,
-  0,
+  title_y,
   fe.layout.width * 7/8,
-  fe.layout.height / 40
+  text_h
 );
 title.align = Align.Left;
 
 carousel.num_t = fe.add_text(
   "[ListEntry]/[ListSize]",
   fe.layout.width * 7/8,
-  0,
+  title_y,
   fe.layout.width * 1/8,
-  fe.layout.height / 40
+  text_h
 );
 carousel.num_t.align = Align.Right;
 
-carousel.name_t =  fe.add_text(
+local name_y = fe.layout.height - text_h - 16;
+carousel.name_t = fe.add_text(
   "[Title]",
   0,
-  fe.layout.height - carouselGap - fe.layout.height / 40,
-  fe.layout.width, fe.layout.height / 40
+  name_y,
+  fe.layout.width,
+  text_h
 );
 
 carousel.update_frame();
