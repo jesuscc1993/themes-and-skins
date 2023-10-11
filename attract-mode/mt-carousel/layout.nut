@@ -47,6 +47,7 @@ class Carousel extends Conveyor {
   frame=null;
   name_t=null;
   num_t=null;
+  title_t=null;
   sel_x=0;
   sel_y=0;
 
@@ -252,19 +253,18 @@ for (local i = 0; i < rows * paddedCols; i++) {
 
 carousel.set_slots(my_array, carousel.get_sel());
 carousel.frame=fe.add_image("frame.png", artwork_width * 2, artwork_height * 2, artwork_width, artwork_height);
-// carousel.frame.preserve_aspect_ratio = true;
 
 local text_h = 32;
 
 local title_y = 16;
-local title = fe.add_text(
+carousel.title_t = fe.add_text(
   "[DisplayName]/[FilterName]",
   0,
   title_y,
   fe.layout.width * 7/8,
   text_h
 );
-title.align = Align.Left;
+carousel.title_t.align = Align.Left;
 
 carousel.num_t = fe.add_text(
   "[ListEntry]/[ListSize]",
