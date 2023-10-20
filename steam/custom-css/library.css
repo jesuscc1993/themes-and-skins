@@ -7,6 +7,7 @@
   --game-header-height: 256px;
   --grid-gap: 18px;
   --library-section-gap: 8px;
+  --library-sidebar-width: 320px;
 }
 
 /* hide favorites collection */
@@ -53,10 +54,10 @@
   max-width: none;
   min-width: 0;
   padding-right: 16px;
-  width: 272px;
+  width: var(--library-sidebar-width);
 }
 [class*='library_LeftListSizableContainer']:not(:hover) {
-  margin-left: -272px;
+  margin-left: calc(var(--library-sidebar-width) * -1);
 }
 
 [class*='libraryhome_UpdatesContainer'] {
@@ -237,6 +238,6 @@
 }
 
 /* round game banners */
-[class*="appportrait_AppPortraitBanner_"] {
+[class*='appportrait_AppPortraitBanner_'] {
   border-radius: var(--banner-border-radius);
 }
