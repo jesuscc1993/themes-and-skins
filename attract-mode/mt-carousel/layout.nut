@@ -36,6 +36,9 @@ local cols = fe.layout.width / artwork_width;
 local paddedCols = cols + 2;
 local rows = 1;
 
+local scaled_artwork_width = artwork_width - artwork_gap;
+local scaled_artwork_height = artwork_height.tofloat() / artwork_width * scaled_artwork_width;
+
 local artwork_half_gap = artwork_gap / 2;
 local carousel_y = (fe.layout.height - artwork_height) / 2;
 // local carousel_x = (fe.layout.width - paddedCols * (artwork_width + artwork_gap)) / 2;
@@ -66,7 +69,7 @@ class Carousel extends Conveyor {
     frame_top.y = carousel_y;
     
     frame_bottom.x = carousel_x + artwork_width * sel_x;
-    frame_bottom.y = carousel_y + artwork_height - artwork_width;
+    frame_bottom.y = carousel_y + scaled_artwork_height + artwork_gap - artwork_width;
     
     name_t.index_offset = num_t.index_offset = get_sel() - selection_index;  
   }
@@ -191,8 +194,8 @@ class Carousel extends ConveyorSlot {
       my_config["art"],
       0,
       0,
-      artwork_width - artwork_gap,
-      artwork_height - artwork_gap
+      scaled_artwork_width,
+      scaled_artwork_height
     );
     m_art.preserve_aspect_ratio = true;
     m_art.alpha = 0;
