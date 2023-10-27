@@ -44,12 +44,13 @@ local carousel_x = - (artwork_width + artwork_gap) * 3 / 4;
 fe.add_image(bg_img, 0, 0, fe.layout.width, fe.layout.height);
 
 class Carousel extends Conveyor {
-  frame=null;
+  frame_top=null;
+  frame_bottom=null;
   name_t=null;
   num_t=null;
   title_t=null;
+  controls_y=null;
   sel_x=0;
-  sel_y=0;
 
   constructor() {
     base.constructor();
@@ -61,8 +62,11 @@ class Carousel extends Conveyor {
   }
 
   function update_frame() {
-    frame.x = carousel_x + artwork_width * sel_x;
-    frame.y = carousel_y + artwork_height * sel_y;
+    frame_top.x = carousel_x + artwork_width * sel_x;
+    frame_top.y = carousel_y;
+    
+    frame_bottom.x = carousel_x + artwork_width * sel_x;
+    frame_bottom.y = carousel_y + artwork_height - artwork_width;
     
     name_t.index_offset = num_t.index_offset = get_sel() - selection_index;  
   }
@@ -76,7 +80,7 @@ class Carousel extends Conveyor {
   }
 
   function get_sel() {
-    return sel_x * rows + sel_y;
+    return sel_x * rows;
   }
 
   function on_signal(sig) {
@@ -124,7 +128,6 @@ class Carousel extends Conveyor {
             m_objs[i].set_alpha((temp > 255) ? 255 : temp);
           }
 
-          frame.alpha = 255 * transition_time / transition_ms;
           return true;
         }
 
@@ -133,8 +136,6 @@ class Carousel extends Conveyor {
         foreach (o in m_objs) {
           o.set_alpha(255);
         }
-
-        frame.alpha = 255;
 
         if (old_alpha != 255) {
           return true;
@@ -156,7 +157,6 @@ class Carousel extends Conveyor {
             local temp = 255 - 510 * (num - r - c) / num * transition_time / transition_ms;
             m_objs[i].set_alpha((temp < 0) ? 0 : temp);
           }
-          frame.alpha = 255 - 255 * transition_time / transition_ms;
           return true;
         }
 
@@ -165,8 +165,6 @@ class Carousel extends Conveyor {
         foreach (o in m_objs) {
           o.set_alpha(0);
         }
-
-        frame.alpha = 0;
 
         if (old_alpha != 0) {
           return true;
@@ -251,9 +249,6 @@ for (local i = 0; i < rows * paddedCols; i++) {
   my_array.push(Carousel(i));
 }
 
-carousel.set_slots(my_array, carousel.get_sel());
-carousel.frame=fe.add_image("frame.png", artwork_width * 2, artwork_height * 2, artwork_width, artwork_height);
-
 local text_h = 32;
 
 local title_y = 16;
@@ -266,22 +261,43 @@ carousel.title_t = fe.add_text(
 );
 carousel.title_t.align = Align.Left;
 
-carousel.num_t = fe.add_text(
+local num_t = fe.add_text(
   "[ListEntry]/[ListSize]",
   fe.layout.width * 7/8,
   title_y,
   fe.layout.width * 1/8,
   text_h
 );
-carousel.num_t.align = Align.Right;
+num_t.align = Align.Right;
+carousel.num_t = num_t;
 
 local name_y = fe.layout.height - text_h - 16;
-carousel.name_t = fe.add_text(
+local name_t = fe.add_text(
   "[Title]",
   0,
   name_y,
   fe.layout.width,
   text_h
 );
+carousel.name_t = name_t;
+
+local controls_y = name_y - 56;
+local controls_t = fe.add_text(
+  "Default controls: RIGHT (Next Game) / Left (Previous Game) / UP (Next Display) / DOWN (Previous Display)",
+  0,
+  controls_y,
+  fe.layout.width,
+  text_h * 0.75
+);
+controls_t.set_rgb(128, 128, 128);
+carousel.controls_t = controls_t;
+
+carousel.set_slots(my_array, carousel.get_sel());
+
+carousel.frame_top=fe.add_image("frame_top.png", 0, 0, artwork_width, artwork_width);
+carousel.frame_top.smooth = false;
+
+carousel.frame_bottom=fe.add_image("frame_bottom.png", 0, 0, artwork_width, artwork_width);
+carousel.frame_bottom.smooth = false;
 
 carousel.update_frame();
