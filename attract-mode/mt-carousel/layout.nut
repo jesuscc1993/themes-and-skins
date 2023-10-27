@@ -28,7 +28,7 @@ fe.load_module("conveyor");
 local my_config = fe.get_config();
 local transition_ms = my_config["transition_ms"].tointeger();
 local artwork_gap = my_config["artwork_gap" ].tointeger();
-local artwork_height = my_config["artwork_height"].tointeger();
+local artwork_height = my_config["artwork_height"].tofloat();
 local artwork_width = my_config["artwork_width"].tointeger();
 local bg_img = my_config["bg_img"];
 
@@ -37,7 +37,7 @@ local paddedCols = cols + 2;
 local rows = 1;
 
 local scaled_artwork_width = artwork_width - artwork_gap;
-local scaled_artwork_height = artwork_height.tofloat() / artwork_width * scaled_artwork_width;
+local scaled_artwork_height = artwork_height / artwork_width * scaled_artwork_width;
 
 local artwork_half_gap = artwork_gap / 2;
 local carousel_y = (fe.layout.height - artwork_height) / 2;
