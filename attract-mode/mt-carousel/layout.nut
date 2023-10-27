@@ -29,10 +29,10 @@ local my_config = fe.get_config();
 local transition_ms = my_config["transition_ms"].tointeger();
 local artwork_gap = my_config["artwork_gap" ].tointeger();
 local artwork_height = my_config["artwork_height"].tofloat();
-local artwork_width = my_config["artwork_width"].tointeger();
+local artwork_width = my_config["artwork_width"].tofloat();
 local bg_img = my_config["bg_img"];
 
-local cols = fe.layout.width / artwork_width;
+local cols = (fe.layout.width / artwork_width).tointeger();;
 local paddedCols = cols + 2;
 local rows = 1;
 
