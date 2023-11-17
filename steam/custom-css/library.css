@@ -128,6 +128,7 @@
 [class*='appportrait_LibraryItemBox'] {
   transition-duration: 150ms !important;
   transition-timing-function: cubic-bezier(0, 0.7, 0.8, 1) !important;
+  overflow: visible;
 }
 [class*='appportrait_LibraryItemBoxShine'] {
   display: none !important;
@@ -191,21 +192,27 @@
 }
 
 /* cover border radius */
-[class*='appportrait_LibraryItemBox'] {
+[class*='libraryassetimage_PortraitImage'] {
   border-radius: var(--cover-border-radius);
+  overflow: hidden;
 }
 
 /* fade uninstalled games */
+[class*='appportrait_LibraryBottomItems_'] {
+  padding: 0;
+}
+
 [class*='appportrait_Draggable']
   [class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom']:not(
     [class*='appportrait_BarDownloading']
   ) {
-  background: #24282fcc;
-  border-radius: calc(var(--cover-border-radius) - 0.5px);
-  bottom: 0;
+  background: #24282f;
+  display: block;
   height: 100%;
+  opacity: 0.66;
   pointer-events: none;
-  z-index: 12;
+  position: absolute;
+  top: 0;
 }
 [class*='HoversEnabled']
   [class*='LibraryItemBox']:hover:not(
