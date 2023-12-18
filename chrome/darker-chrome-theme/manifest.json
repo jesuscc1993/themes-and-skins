@@ -1,0 +1,25 @@
+{
+  "description": "Darker theme for Google Chrome.",
+  "manifest_version": 3,
+  "name": "Darker Theme",
+  "theme": {
+    "colors": {
+      "bookmark_text": [204, 204, 204],
+      "button_background": [0, 0, 0, 0],
+      "frame": [0, 0, 0],
+      "frame_inactive": [32, 33, 36],
+      "frame_incognito": [0, 0, 0],
+      "frame_incognito_inactive": [32, 33, 36],
+      "ntp_background": [31, 31, 31],
+      "ntp_link": [204, 204, 204],
+      "ntp_text": [204, 204, 204],
+      "tab_background_text": [204, 204, 204],
+      "tab_text": [204, 204, 204],
+      "toolbar": [32, 33, 36]
+    },
+    "tints": {
+      "buttons": [0, 0, 0.8]
+    }
+  },
+  "version": "1.0"
+}
