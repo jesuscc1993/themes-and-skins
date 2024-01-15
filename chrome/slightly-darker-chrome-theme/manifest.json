@@ -7,16 +7,16 @@
       "bookmark_text": [204, 204, 204],
       "button_background": [0, 0, 0, 0],
       "frame": [0, 0, 0],
-      "frame_inactive": [44, 45, 48],
+      "frame_inactive": [43, 45, 49],
       "frame_incognito": [0, 0, 0],
-      "frame_incognito_inactive": [44, 45, 48],
+      "frame_incognito_inactive": [43, 45, 49],
       "ntp_background": [31, 31, 31],
       "ntp_link": [204, 204, 204],
       "ntp_text": [204, 204, 204],
-      "omnibox_background": [24, 25, 27],
+      "omnibox_background": [29, 29, 34],
       "tab_background_text": [204, 204, 204],
       "tab_text": [204, 204, 204],
-      "toolbar": [44, 45, 48]
+      "toolbar": [43, 45, 49]
     },
     "tints": {
       "buttons": [0, 0, 0.8]
