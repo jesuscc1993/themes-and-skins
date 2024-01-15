@@ -13,6 +13,7 @@
       "ntp_background": [31, 31, 31],
       "ntp_link": [204, 204, 204],
       "ntp_text": [204, 204, 204],
+      "omnibox_background": [16, 17, 20],
       "tab_background_text": [204, 204, 204],
       "tab_text": [204, 204, 204],
       "toolbar": [32, 33, 36]
