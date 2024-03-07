@@ -6,6 +6,10 @@
 [class*='titlebarcontrols_Button'] {
   padding: 0;
 }
+[class*='titlebarcontrols_ParentalToggleButton'],
+[class*='titlebarcontrols_KioskModeToggleButton'] {
+  min-width: 24px;
+}
 
 /* hide big picture toggle */
 [class*='titlebarcontrols_AccountMenu'] {
