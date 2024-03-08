@@ -1,0 +1,16 @@
+{
+  "name": "Firefox Brand Darker",
+  "manifest_version": 2,
+  "version": "1.0",
+  "theme": {
+    "colors": {
+      "frame": "#000000",
+      "tab_background_text": "#ffffff",
+      "toolbar": "#201339",
+      "bookmark_text": "#ffffff",
+      "toolbar_field": "#000000",
+      "toolbar_field_text": "#ffffff",
+      "tab_line": "#000000"
+    }
+  }
+}

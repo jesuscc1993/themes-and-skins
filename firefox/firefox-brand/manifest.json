@@ -1,0 +1,21 @@
+{
+  "name": "Firefox Brand",
+  "manifest_version": 2,
+  "version": "1.0",
+  "theme": {
+    "colors": {
+      "frame": "#201339",
+      "tab_background_text": "#ffffff",
+      "toolbar": "#311f62",
+      "bookmark_text": "#ffffff",
+      "toolbar_field": "#201339",
+      "toolbar_field_text": "#ffffff",
+      "tab_line": "#201339"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{9c766d49-043c-4d97-9c52-e005f0859f1d}"
+    }
+  }
+}
