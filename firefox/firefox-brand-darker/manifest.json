@@ -8,9 +8,9 @@
       "tab_background_text": "#ffffff",
       "toolbar": "#201339",
       "bookmark_text": "#ffffff",
-      "toolbar_field": "#000000",
+      "toolbar_field": "#08050e",
       "toolbar_field_text": "#ffffff",
-      "tab_line": "#000000"
+      "tab_line": "#201339"
     }
   }
 }
