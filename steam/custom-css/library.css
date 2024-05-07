@@ -166,9 +166,10 @@
 /* */
 
 /* disable cover hover */
-.HoversEnabled .LibraryItemBox,
-.HoversEnabled .LibraryItemBox .libraryassetimage_Image_,
-.HoversEnabled .LibraryItemBox .appportrait_FooterBlurImage_,
+.appportrait_HoversEnabled_ .LibraryItemBox,
+.appportrait_HoversEnabled_ .LibraryItemBoxSubscript,
+.appportrait_HoversEnabled_ .LibraryItemBox .libraryassetimage_Image_,
+.appportrait_HoversEnabled_ .LibraryItemBox .appportrait_FooterBlurImage_,
 .appportrait_Draggable_:hover .appportrait_AppPortraitBannerContainer_ {
   transform: none !important;
 }
@@ -201,7 +202,7 @@
   position: absolute;
   top: 0;
 }
-.HoversEnabled
+.appportrait_HoversEnabled_
   .LibraryItemBox:hover:not(
     .appportrait_Landscape_
       .appportrait_UninstalledBar.appportrait_UninstalledBarBottom
