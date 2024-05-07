@@ -3,30 +3,30 @@
 }
 
 /* evenly sized header buttons */
-[class*='titlebarcontrols_Button'] {
+.titlebarcontrols_Button {
   padding: 0;
 }
-[class*='titlebarcontrols_ParentalToggleButton'],
-[class*='titlebarcontrols_KioskModeToggleButton'] {
+.titlebarcontrols_ParentalToggleButton,
+.titlebarcontrols_KioskModeToggleButton {
   min-width: 24px;
 }
 
 /* hide big picture toggle */
-[class*='titlebarcontrols_AccountMenu'] {
+.titlebarcontrols_AccountMenu {
   margin-right: 0 !important;
 }
-[class*='titlebarcontrols_GamepadUIToggle'] {
+.titlebarcontrols_GamepadUIToggle {
   display: none !important;
 }
 
 /* always hide address bar */
-[class*='steamdesktop_URLBar_'],
-[class*='steamdesktop_URLBarReplacement_'] {
+.steamdesktop_URLBar_,
+.steamdesktop_URLBarReplacement_ {
   display: none !important;
 }
 
 /* reduce context menu padding */
-.DesktopUI [class*='contextmenu_contextMenuItem'],
-[class*='contextmenu_ForceDesktop'] [class*='contextmenu_contextMenuItem'] {
+.DesktopUI .contextmenu_contextMenuItem,
+.contextmenu_ForceDesktop .contextmenu_contextMenuItem {
   padding: var(--context-menu-padding);
 }

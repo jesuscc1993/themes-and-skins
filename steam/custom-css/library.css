@@ -11,200 +11,187 @@
 }
 
 /* hide favorites collection */
-[class*='libraryhomeshowcases_ShowcaseGrid_'][style*='grid-auto-rows: 148px;']
-  > [class*='allcollections_Collection_']:first-of-type {
+.libraryhomeshowcases_ShowcaseGrid_[style*='grid-auto-rows: 148px;']
+  > .allcollections_Collection_:first-of-type {
   display: none !important;
 }
 
 /* hide soundtracks collection */
-[class*='libraryhomeshowcases_ShowcaseGrid_'][style*='grid-auto-rows: 148px;']
-  > [class*='allcollections_Collection_']:last-of-type {
+.libraryhomeshowcases_ShowcaseGrid_[style*='grid-auto-rows: 148px;']
+  > .allcollections_Collection_:last-of-type {
   display: none !important;
 }
 
 /* always hide address bar */
-[class*='steamdesktop_URLBar_'],
-[class*='steamdesktop_URLBarReplacement_'] {
+.steamdesktop_URLBar_,
+.steamdesktop_URLBarReplacement_ {
   display: none !important;
 }
 
 /* hide news, sidebar and bottom bar until hovered */
-[class*='bottombar_BottomBarContainer'],
-[class*='library_LeftListSizableContainer'],
-[class*='libraryhome_UpdatesContainer'] {
+.bottombar_BottomBarContainer,
+.library_LeftListSizableContainer,
+.libraryhome_UpdatesContainer {
   position: absolute;
   transition-delay: 333ms;
   transition-duration: 150ms;
   z-index: 100;
 }
 
-[class*='bottombar_BottomBarContainer'] {
+.bottombar_BottomBarContainer {
   --height: 50px;
   bottom: 0;
   height: var(--height);
   padding-top: 24px;
   width: 100%;
 }
-[class*='bottombar_BottomBarContainer']:not(:hover) {
+.bottombar_BottomBarContainer:not(:hover) {
   margin-bottom: calc(var(--height) * -1);
 }
 
-[class*='library_LeftListSizableContainer'] {
+.library_LeftListSizableContainer {
   height: 100%;
   max-width: none;
   min-width: 0;
   padding-right: 16px;
   width: var(--library-sidebar-width);
 }
-[class*='library_LeftListSizableContainer']:not(:hover) {
+.library_LeftListSizableContainer:not(:hover) {
   margin-left: calc(var(--library-sidebar-width) * -1);
 }
 
-[class*='libraryhome_UpdatesContainer'] {
+.libraryhome_UpdatesContainer {
   border-bottom: 16px solid #2c323a;
   height: 316px !important;
   width: 100%;
 }
-[class*='libraryhome_UpdatesContainer']:hover {
+.libraryhome_UpdatesContainer:hover {
   border-bottom-width: 0;
 }
-[class*='libraryhome_UpdatesContainer']:not(:hover) {
+.libraryhome_UpdatesContainer:not(:hover) {
   margin-top: -300px;
 }
 
-[class*='libraryhome_LibraryHome'] {
+.libraryhome_LibraryHome {
   padding: 8px 4px 32px 10px;
 }
 /* */
 
 /* custom cover sizes */
 /* custom cover sizes: grid */
-[class*='libraryhomeshowcases_ShowcaseGrid'] {
+.libraryhomeshowcases_ShowcaseGrid {
   gap: var(--grid-gap) !important;
   grid-template-columns: repeat(auto-fill, var(--cover-width)) !important;
   justify-content: center !important;
   padding: 8px 0 !important;
 }
-[class*='libraryhomeshowcases_ShowcaseGrid'][style*='grid-auto-rows: 222px;'] {
+.libraryhomeshowcases_ShowcaseGrid[style*='grid-auto-rows: 222px;'] {
   grid-auto-rows: var(--cover-height) !important;
 }
-[class*='libraryhomeshowcases_ShowcaseGrid'][style*='grid-auto-rows: 148px;'] {
+.libraryhomeshowcases_ShowcaseGrid[style*='grid-auto-rows: 148px;'] {
   grid-auto-rows: var(--cover-width) !important;
 }
-[class*='cssgrid_Container'] {
+.cssgrid_Container {
   height: auto !important;
 }
-[class*='appportrait_LibraryItemBox'] {
+.appportrait_LibraryItemBox {
   border-width: 0 !important;
 }
-[class*='allcollections_Collection_']
-  [class*='allcollections_CollectionLabel_'] {
+.allcollections_Collection_ .allcollections_CollectionLabel_ {
   width: calc(100% - 20px);
 }
 
 /* custom cover sizes: recent games */
-[class*='libraryhomeshowcases_Showcase_']
-  [class*='libraryhomeshowcases_ChildrenContainer_'] {
+.libraryhomeshowcases_Showcase_ .libraryhomeshowcases_ChildrenContainer_ {
   margin: 0 5px !important;
 }
-[class*='libraryhomerecentgames_RecentGame_']:not(:last-child) {
+.libraryhomerecentgames_RecentGame_:not(:last-child) {
   margin-right: var(--grid-gap);
 }
-[class*='libraryhomerecentgames_RecentGameMediaContainer_'][style*='width: 311.984px'] {
+.libraryhomerecentgames_RecentGameMediaContainer_[style*='width: 311.984px'] {
   width: var(--cover-width-landscape) !important;
   height: var(--cover-height) !important;
 }
-[class*='libraryhomerecentgames_RecentGameMediaContainer_'][style*='width: 148px;'] {
+.libraryhomerecentgames_RecentGameMediaContainer_[style*='width: 148px;'] {
   width: var(--cover-width) !important;
   height: var(--cover-height) !important;
 }
-[class*='libraryhomerecentgames_RecentGameMediaContainer_']
-  [class*='libraryassetimage_Container_'][class*='libraryassetimage_LandscapeImage'] {
+.libraryhomerecentgames_RecentGameMediaContainer_
+  .libraryassetimage_Container_.libraryassetimage_LandscapeImage {
   padding-top: calc(var(--cover-height) - 76px);
 }
 /* */
 
 /* hide game card badges until hovered */
-[class*='appportrait_LibraryItemBox'] {
+.appportrait_LibraryItemBox {
   transition-duration: 150ms !important;
   transition-timing-function: cubic-bezier(0, 0.7, 0.8, 1) !important;
   overflow: visible;
 }
-[class*='appportrait_LibraryItemBoxShine'] {
+.appportrait_LibraryItemBoxShine {
   display: none !important;
 }
-[class*='appportrait_Draggable']
-  [class*='appportrait_LibraryItemBoxSubscript'] {
+.appportrait_Draggable .appportrait_LibraryItemBoxSubscript {
   transition: 500ms;
   pointer-events: none;
 }
-[class*='appportrait_Draggable']:not(:hover)
-  [class*='appportrait_LibraryItemBoxSubscript'] {
+.appportrait_Draggable:not(:hover) .appportrait_LibraryItemBoxSubscript {
   opacity: 0;
 }
 /* */
 
 /*  move "add shelf" button to the bottom */
-[class*='libraryhome_LibraryHome'] > div {
+.libraryhome_LibraryHome > div {
   display: flex;
   flex-direction: column;
 }
 
-[class*='libraryhome_LibraryHome']
-  > div
-  > [class*='libraryhomeshowcases_Sortable'] {
+.libraryhome_LibraryHome > div > .libraryhomeshowcases_Sortable {
   order: 0;
 }
-[class*='libraryhome_LibraryHome']
-  > div
-  > *:not([class*='libraryhomeshowcases_Sortable']) {
+.libraryhome_LibraryHome > div > *:not(.libraryhomeshowcases_Sortable) {
   order: 1;
 }
 /* */
 
 /* resize header */
-[class*='sharedappdetailsheader_TopCapsule_'],
-[class*='sharedappdetailsheader_HeaderBackgroundImage'] {
+.sharedappdetailsheader_TopCapsule_,
+.sharedappdetailsheader_HeaderBackgroundImage {
   max-height: calc(var(--game-header-height) - 64px) !important;
 }
-[class*='sharedappdetailsheader_ImgContainer_'],
-[class*='sharedappdetailsheader_ImgSrc_'] {
+.sharedappdetailsheader_ImgContainer_,
+.sharedappdetailsheader_ImgSrc_ {
   height: var(--game-header-height);
 }
 /* */
 
 /* disable cover hover */
-[class*='HoversEnabled'] [class*='LibraryItemBox'],
-[class*='HoversEnabled']
-  [class*='LibraryItemBox']
-  [class*='libraryassetimage_Image_'],
-[class*='HoversEnabled']
-  [class*='LibraryItemBox']
-  [class*='appportrait_FooterBlurImage_'],
-[class*='appportrait_Draggable_']:hover
-  [class*='appportrait_AppPortraitBannerContainer_'] {
+.HoversEnabled .LibraryItemBox,
+.HoversEnabled .LibraryItemBox .libraryassetimage_Image_,
+.HoversEnabled .LibraryItemBox .appportrait_FooterBlurImage_,
+.appportrait_Draggable_:hover .appportrait_AppPortraitBannerContainer_ {
   transform: none !important;
 }
 
 /* custom library section spacing */
-[class*='libraryhomeshowcases_ShowcaseOuter'] {
+.libraryhomeshowcases_ShowcaseOuter {
   padding-bottom: var(--library-section-gap);
 }
 
 /* cover border radius */
-[class*='libraryassetimage_PortraitImage'] {
+.libraryassetimage_PortraitImage {
   border-radius: var(--cover-border-radius);
   overflow: hidden;
 }
 
 /* fade uninstalled games */
-[class*='appportrait_LibraryBottomItems_'] {
+.appportrait_LibraryBottomItems_ {
   padding: 0;
 }
 
-[class*='appportrait_Draggable']
-  [class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom']:not(
-    [class*='appportrait_BarDownloading']
+.appportrait_Draggable
+  .appportrait_UninstalledBar.appportrait_UninstalledBarBottom:not(
+    .appportrait_BarDownloading
   ) {
   background: #24282f;
   display: block;
@@ -214,37 +201,37 @@
   position: absolute;
   top: 0;
 }
-[class*='HoversEnabled']
-  [class*='LibraryItemBox']:hover:not(
-    [class*='appportrait_Landscape_']
-      [class*='appportrait_UninstalledBar'][class*='appportrait_UninstalledBarBottom']
+.HoversEnabled
+  .LibraryItemBox:hover:not(
+    .appportrait_Landscape_
+      .appportrait_UninstalledBar.appportrait_UninstalledBarBottom
   ) {
   transform: rotateX(3deg) translateZ(15px);
 }
 
 /* hide sidebar game icons */
-[class*='library_LeftListSizableContainer'] [class*='gamelistentry_AppIcon'],
-[class*='library_LeftListSizableContainer'] [class*='gamelistentry_GameIcon'] {
+.library_LeftListSizableContainer .gamelistentry_AppIcon,
+.library_LeftListSizableContainer .gamelistentry_GameIcon {
   display: none;
 }
 
 /* fix recent section spacing */
-[class*='libraryhomerecentgames_RecentGames_'][style*='height'] {
+.libraryhomerecentgames_RecentGames_[style*='height'] {
   margin-bottom: -42px;
 }
 
 /* fix uninstalled games */
-[class*='appportrait_UninstalledBarBottom'] {
+.appportrait_UninstalledBarBottom {
   margin-top: 0 !important;
 }
 
 /* remove game header blur */
-[class*='sharedappdetailsheader_ImgSrc_'] {
+.sharedappdetailsheader_ImgSrc_ {
   max-width: none;
   -webkit-mask-image: none;
 }
 
 /* round game banners */
-[class*='appportrait_AppPortraitBanner_'] {
+.appportrait_AppPortraitBanner_ {
   border-radius: var(--banner-border-radius);
 }

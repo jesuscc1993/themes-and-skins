@@ -1,0 +1,14 @@
+{
+  "name": "MT Custom CSS",
+  "manifest_version": 8,
+  "version": "v1.0",
+  "target": "Other",
+  "author": "MetalTxus",
+  "description": "CSS modifications for the Steam client.",
+  "inject": {
+    "custom-css/general.css": ["Steam"],
+    "custom-css/library.css": ["SteamLibraryWindow"],
+    "custom-css/overlay.css": ["Steam"],
+    "custom-css/theme.css": ["Steam"]
+  }
+}
