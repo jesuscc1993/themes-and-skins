@@ -9,18 +9,26 @@
   --library-section-gap: 8px;
   --library-sidebar-width: 320px;
 }
+
+/* hide favorites collection */
 ._3DJLGrqzoQ5vMDI_4VG502[style*='grid-auto-rows: 148px;']
   > ._3IWn-2rn7x98o5fDd0rAxb:first-of-type {
   display: none !important;
 }
+
+/* hide soundtracks collection */
 ._3DJLGrqzoQ5vMDI_4VG502[style*='grid-auto-rows: 148px;']
   > ._3IWn-2rn7x98o5fDd0rAxb:last-of-type {
   display: none !important;
 }
+
+/* always hide address bar */
 .UkR3sY319PuaUNuUWks2K,
 ._2CmrnGY-Amtd83ScJkFvx2 {
   display: none !important;
 }
+
+/* hide news, sidebar and bottom bar until hovered */
 ._1_yS5UP7el0aN4vntx3dx,
 ._9sPoVBFyE_vE87mnZJ5aB,
 ._17uEBe5Ri8TMsnfELvs8-N {
@@ -29,6 +37,7 @@
   transition-duration: 150ms;
   z-index: 100;
 }
+
 ._1_yS5UP7el0aN4vntx3dx {
   --height: 50px;
   bottom: 0;
@@ -39,6 +48,7 @@
 ._1_yS5UP7el0aN4vntx3dx:not(:hover) {
   margin-bottom: calc(var(--height) * -1);
 }
+
 ._9sPoVBFyE_vE87mnZJ5aB {
   height: 100%;
   max-width: none;
@@ -49,6 +59,7 @@
 ._9sPoVBFyE_vE87mnZJ5aB:not(:hover) {
   margin-left: calc(var(--library-sidebar-width) * -1);
 }
+
 ._17uEBe5Ri8TMsnfELvs8-N {
   border-bottom: 16px solid #2c323a;
   height: 316px !important;
@@ -60,9 +71,14 @@
 ._17uEBe5Ri8TMsnfELvs8-N:not(:hover) {
   margin-top: -300px;
 }
+
 ._3Sb2o_mQ30IDRh0C72QUUu {
   padding: 8px 4px 32px 10px;
 }
+/* */
+
+/* custom cover sizes */
+/* custom cover sizes: grid */
 ._3DJLGrqzoQ5vMDI_4VG502 {
   gap: var(--grid-gap) !important;
   grid-template-columns: repeat(auto-fill, var(--cover-width)) !important;
@@ -84,6 +100,8 @@
 ._3IWn-2rn7x98o5fDd0rAxb ._1J1LQ0vGtpM3n0xw7XwQM6 {
   width: calc(100% - 20px);
 }
+
+/* custom cover sizes: recent games */
 .V7RuDNUxhxoBRaiGWbk3B ._1VMQWnw-9FBp-MVXUbWfS_ {
   margin: 0 5px !important;
 }
@@ -98,9 +116,13 @@
   width: var(--cover-width) !important;
   height: var(--cover-height) !important;
 }
-._2XftMcBO9aY7VXCivzuW7- ._1R9r2OBCxAmtuUVrgBEUBw.ZsU8nIIpj8MJn0vzMzSp1 {
+._2XftMcBO9aY7VXCivzuW7-
+  ._1R9r2OBCxAmtuUVrgBEUBw.ZsU8nIIpj8MJn0vzMzSp1 {
   padding-top: calc(var(--cover-height) - 76px);
 }
+/* */
+
+/* hide game card badges until hovered */
 .WYgDg9NyCcMIVuMyZ_NBC {
   transition-duration: 150ms !important;
   transition-timing-function: cubic-bezier(0, 0.7, 0.8, 1) !important;
@@ -116,16 +138,23 @@
 ._1pwP4eeP1zQD7PEgmsep0W:not(:hover) ._1LJqx_qFOC8199RBQO5kU8 {
   opacity: 0;
 }
+/* */
+
+/*  move "add shelf" button to the bottom */
 ._3Sb2o_mQ30IDRh0C72QUUu > div {
   display: flex;
   flex-direction: column;
 }
+
 ._3Sb2o_mQ30IDRh0C72QUUu > div > ._2Z9gJ6Pd7eZn-kfODcXJuR {
   order: 0;
 }
 ._3Sb2o_mQ30IDRh0C72QUUu > div > *:not(._2Z9gJ6Pd7eZn-kfODcXJuR) {
   order: 1;
 }
+/* */
+
+/* resize header */
 ._2meE3N6-Wkw3yQUVtQK-i8,
 ._1sarAIIhbGSUQoAZkztD_F {
   max-height: calc(var(--game-header-height) - 64px) !important;
@@ -134,6 +163,9 @@
 ._dijeIFQK07Fymccmf6qA {
   height: var(--game-header-height);
 }
+/* */
+
+/* disable cover hover */
 ._54PuCatl_tYG836TOs4Mv .WYgDg9NyCcMIVuMyZ_NBC,
 ._54PuCatl_tYG836TOs4Mv ._1LJqx_qFOC8199RBQO5kU8,
 ._54PuCatl_tYG836TOs4Mv .WYgDg9NyCcMIVuMyZ_NBC ._24_AuLm54JVe1Zc0AApCDR,
@@ -141,18 +173,27 @@
 ._1pwP4eeP1zQD7PEgmsep0W:hover ._2jj5TjFhHD1lvxMlpJYek6 {
   transform: none !important;
 }
+
+/* custom library section spacing */
 ._2tC_c87MH67xQM7Y0pVyXm {
   padding-bottom: var(--library-section-gap);
 }
+
+/* cover border radius */
 ._3Ehhd5MxErV_bXQE4qVhzB {
   border-radius: var(--cover-border-radius);
   overflow: hidden;
 }
+
+/* fade uninstalled games */
 .tvCvyQrDNndbXWp_b5__b {
   padding: 0;
 }
+
 ._1pwP4eeP1zQD7PEgmsep0W
-  .kX-tIJx4a9vKVuUkKJARv._1wAArO4jx5Kth5YdKAQ_Sd:not(._3BNwjsy5WltxayFptkx3KF) {
+  .kX-tIJx4a9vKVuUkKJARv._1wAArO4jx5Kth5YdKAQ_Sd:not(
+    ._3BNwjsy5WltxayFptkx3KF
+  ) {
   background: #24282f;
   display: block;
   height: 100%;
@@ -163,24 +204,35 @@
 }
 ._54PuCatl_tYG836TOs4Mv
   .WYgDg9NyCcMIVuMyZ_NBC:hover:not(
-    ._3VOR2AeYATx3qSE0I-Pm-5 .kX-tIJx4a9vKVuUkKJARv._1wAArO4jx5Kth5YdKAQ_Sd
+    ._3VOR2AeYATx3qSE0I-Pm-5
+      .kX-tIJx4a9vKVuUkKJARv._1wAArO4jx5Kth5YdKAQ_Sd
   ) {
   transform: rotateX(3deg) translateZ(15px);
 }
+
+/* hide sidebar game icons */
 ._9sPoVBFyE_vE87mnZJ5aB .gamelistentry_AppIcon,
 ._9sPoVBFyE_vE87mnZJ5aB .ga1hyw11cdBVodrCAidPF {
   display: none;
 }
+
+/* fix recent section spacing */
 ._1RLnyCu6_DW-NTlpHTBhig[style*='height'] {
   margin-bottom: -42px;
 }
+
+/* fix uninstalled games */
 ._1wAArO4jx5Kth5YdKAQ_Sd {
   margin-top: 0 !important;
 }
+
+/* remove game header blur */
 ._dijeIFQK07Fymccmf6qA {
   max-width: none;
   -webkit-mask-image: none;
 }
+
+/* round game banners */
 .N8aJrSpxQ6II4CY_aFdYI {
   border-radius: var(--banner-border-radius);
 }

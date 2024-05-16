@@ -1,6 +1,8 @@
 :root {
   --context-menu-padding: 6px 12px;
 }
+
+/* evenly sized header buttons */
 ._2Szzh5sKyGgnLUR870zbDE {
   padding: 0;
 }
@@ -8,16 +10,22 @@
 ._3arz-hc3FJ0QKXLPRUSaah {
   min-width: 24px;
 }
+
+/* hide big picture toggle */
 ._3yD46y5pd3zOGR7CzKs0mC {
   margin-right: 0 !important;
 }
 ._3LKQ3S_yqrebeNLF6aeiog {
   display: none !important;
 }
+
+/* always hide address bar */
 .UkR3sY319PuaUNuUWks2K,
 ._2CmrnGY-Amtd83ScJkFvx2 {
   display: none !important;
 }
+
+/* reduce context menu padding */
 .DesktopUI .pFo3kQOzrl9qVLPXXGIMp,
 ._7K1n9EZg9218K75ZOzcHl .pFo3kQOzrl9qVLPXXGIMp {
   padding: var(--context-menu-padding);

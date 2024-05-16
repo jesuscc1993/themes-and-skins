@@ -1,10 +1,35 @@
+/* reduce overlay toolbar spacing */
 ._3OzkVrQFFPv0aV41N4MrHV._1kICdMcVupzY5a9PzI2JIU {
   bottom: 7px;
 }
-._2Kmn7fJOkLT4KyWl467a9M .cvw8DHMUBKuZs5DeLJOQ2 .k02sevxj1a1YpBto7_V57 {
+
+/* hide achievement date in sidebar */
+._2Kmn7fJOkLT4KyWl467a9M
+  .cvw8DHMUBKuZs5DeLJOQ2
+  .k02sevxj1a1YpBto7_V57 {
   display: none;
 }
+
+/* tweaks to achievements for better responsiveness */
 ._2Kmn7fJOkLT4KyWl467a9M .cvw8DHMUBKuZs5DeLJOQ2 {
   gap: 12px;
   padding: 4px 12px;
 }
+
+/* hide toolbar unless hovered */
+/*._3OzkVrQFFPv0aV41N4MrHV._1kICdMcVupzY5a9PzI2JIU {
+  bottom: 8px;
+  margin-bottom: -72px;
+  padding-top: 8px;
+  transition: 150ms;
+}
+._3OzkVrQFFPv0aV41N4MrHV._1kICdMcVupzY5a9PzI2JIU:hover {
+  margin-bottom: 0;
+}
+
+.fbu3l7kPiBeb3EKCjIb8n {
+  background: #000E;
+  border-radius: 8px;
+  padding: 4px;
+}*/
+/* */
