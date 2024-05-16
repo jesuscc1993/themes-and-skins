@@ -45,12 +45,21 @@ async function processFile(mappingData, sourcePath, outputPath, fileName) {
     for (const [_, children] of Object.entries(mappingData)) {
       const replacement = `.${children[children.length - 1]}`;
 
-      children.forEach((child) => {
-        const pattern = `\\[class(?:\\*|\\^)?=(?:'|")${escapeRegex(
-          child
-        )}(?:'|")\\]`;
-        content = content.replace(new RegExp(pattern, 'g'), replacement);
-      });
+      for (let i = 0; i < children.length - 1; i++) {
+        const child = children[i];
+
+        if (child) {
+          const pattern = `(?:\\[class(?:\\*|\\^)?=(?:'|")|\\.)${escapeRegex(
+            child
+          )}\\b(?:(?:'|")\\])?`;
+
+          if (content.includes(child)) {
+            console.log(`∞ pattern, replacement`, pattern, replacement);
+          }
+
+          content = content.replace(new RegExp(pattern, 'g'), replacement);
+        }
+      }
     }
 
     await fs.writeFile(outputFile, content, 'utf8');
