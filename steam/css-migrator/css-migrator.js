@@ -53,10 +53,6 @@ async function processFile(mappingData, sourcePath, outputPath, fileName) {
             child
           )}\\b(?:(?:'|")\\])?`;
 
-          if (content.includes(child)) {
-            console.log(`∞ pattern, replacement`, pattern, replacement);
-          }
-
           content = content.replace(new RegExp(pattern, 'g'), replacement);
         }
       }
