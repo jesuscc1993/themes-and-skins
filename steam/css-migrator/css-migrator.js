@@ -59,11 +59,9 @@ async function processFile(mappingData, sourcePath, outputPath, fileName) {
     }
 
     await fs.writeFile(outputFile, content, 'utf8');
-    console.log(
-      `Replaced child strings with parent keys in ${sourceFile} (written to ${outputFile})`
-    );
+    console.log(`Replaced CSS selectors [${sourceFile} > ${outputFile}]`);
   } catch (error) {
-    console.error(`Error processing file: ${sourceFile} - ${error}`);
+    console.error(`Error processing file [${sourceFile}]: ${error}`);
   }
 }
 
