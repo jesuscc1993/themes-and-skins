@@ -4,7 +4,8 @@
   "description": "Migrates old Steam CSS selectors to the new random gibberish.",
   "main": "css-migrator.js",
   "scripts": {
-    "build": "node css-migrator.js https://api.deckthemes.com/beta.json ../custom-css/src/ ../custom-css/"
+    "build": "node css-migrator.js https://api.deckthemes.com/beta.json ../custom-css/src/ ../custom-css/",
+    "clean-build": "node css-migrator.js https://api.deckthemes.com/beta.json ../custom-css/src/ ../custom-css/ true"
   },
   "devDependencies": {
     "axios": "^0.24.0"

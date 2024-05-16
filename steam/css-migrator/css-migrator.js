@@ -3,11 +3,11 @@ const fs = require('fs').promises;
 const path = require('path');
 
 async function run() {
-  const [mappingUrl, sourcePath, outputPath] = process.argv.slice(2);
+  const [mappingUrl, sourcePath, outputPath, compact] = process.argv.slice(2);
 
   if (!mappingUrl || !sourcePath || !outputPath) {
     console.error(
-      'Please provide three arguments: mapping_url, source_path, output_path'
+      'Please provide at least three arguments: mapping_url, source_path, output_path, compact'
     );
     return;
   }
@@ -18,7 +18,13 @@ async function run() {
 
     for (const fileName of files) {
       if (fileName.endsWith('.css')) {
-        await processFile(mappingData, sourcePath, outputPath, fileName);
+        await processFile(
+          mappingData,
+          sourcePath,
+          outputPath,
+          compact,
+          fileName
+        );
       }
     }
   } catch (error) {
@@ -35,7 +41,13 @@ async function fetchMappingData(mappingUrl) {
   }
 }
 
-async function processFile(mappingData, sourcePath, outputPath, fileName) {
+async function processFile(
+  mappingData,
+  sourcePath,
+  outputPath,
+  compact,
+  fileName
+) {
   const sourceFile = path.join(sourcePath, fileName);
   const outputFile = path.join(outputPath, fileName);
 
@@ -56,6 +68,10 @@ async function processFile(mappingData, sourcePath, outputPath, fileName) {
           content = content.replace(new RegExp(pattern, 'g'), replacement);
         }
       }
+    }
+
+    if (compact) {
+      content = content.replace(/\/\*[\s\S]*?\*\//gm, '').replace(/\n+/g, '\n');
     }
 
     await fs.writeFile(outputFile, content, 'utf8');

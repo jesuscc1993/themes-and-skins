@@ -1,0 +1,24 @@
+:root {
+  --context-menu-padding: 6px 12px;
+}
+._2Szzh5sKyGgnLUR870zbDE {
+  padding: 0;
+}
+._13vrqU6oOqmmxrsZSW5O39,
+._3arz-hc3FJ0QKXLPRUSaah {
+  min-width: 24px;
+}
+._3yD46y5pd3zOGR7CzKs0mC {
+  margin-right: 0 !important;
+}
+._3LKQ3S_yqrebeNLF6aeiog {
+  display: none !important;
+}
+.UkR3sY319PuaUNuUWks2K,
+._2CmrnGY-Amtd83ScJkFvx2 {
+  display: none !important;
+}
+.DesktopUI .pFo3kQOzrl9qVLPXXGIMp,
+._7K1n9EZg9218K75ZOzcHl .pFo3kQOzrl9qVLPXXGIMp {
+  padding: var(--context-menu-padding);
+}
