@@ -2,7 +2,7 @@
   --banner-border-radius: 2px;
   --cover-border-radius: 4px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
-  --cover-width: 140px;
+  --cover-width: 154px; /* 140, 154 */
   --cover-width-landscape: calc(var(--cover-width) * 2 + var(--grid-gap));
   --game-header-height: 256px;
   --grid-gap: 18px;
@@ -74,7 +74,7 @@
 }
 
 .libraryhome_LibraryHome {
-  padding: 8px 4px 32px 10px;
+  padding: 8px 8px 32px 10px;
 }
 /* */
 
