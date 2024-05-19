@@ -8,6 +8,7 @@
   --grid-gap: 18px;
   --library-section-gap: 8px;
   --library-sidebar-width: 320px;
+  --uninstalled-overlay-opacity: 0.8;
 }
 
 /* hide favorites collection */
@@ -197,7 +198,7 @@
   background: #24282f;
   display: block;
   height: 100%;
-  opacity: 0.66;
+  opacity: var(--uninstalled-overlay-opacity);
   pointer-events: none;
   position: absolute;
   top: 0;
