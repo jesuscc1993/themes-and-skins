@@ -8,7 +8,7 @@
   --grid-gap: 18px;
   --library-section-gap: 8px;
   --library-sidebar-width: 320px;
-  --uninstalled-overlay-opacity: 0.8;
+  --uninstalled-overlay-opacity: 0.85;
 }
 
 /* hide favorites collection */

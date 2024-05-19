@@ -8,7 +8,7 @@
   --grid-gap: 18px;
   --library-section-gap: 8px;
   --library-sidebar-width: 320px;
-  --uninstalled-overlay-opacity: 0.8;
+  --uninstalled-overlay-opacity: 0.85;
 }
 
 /* hide favorites collection */
@@ -23,7 +23,7 @@
   display: none !important;
 }
 
-/* always hide address bar */
+/* hide address bar */
 .steamdesktop_URLBar_,
 .steamdesktop_URLBarReplacement_ {
   display: none !important;
