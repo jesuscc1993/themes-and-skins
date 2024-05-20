@@ -227,6 +227,18 @@
   margin-top: 0 !important;
 }
 
+/* remove game hover blur */
+.appportraithover_CapsuleBackgroundContainer {
+  display: none;
+}
+
+.appportraithover_ScreenshotCrossfade {
+  -webkit-mask-image: none;
+  background-color: transparent;
+  mask-image: none;
+}
+/* */
+
 /* remove game header blur */
 .sharedappdetailsheader_ImgSrc_ {
   max-width: none;

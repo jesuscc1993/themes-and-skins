@@ -23,7 +23,7 @@
   display: none !important;
 }
 
-/* always hide address bar */
+/* hide address bar */
 .UkR3sY319PuaUNuUWks2K,
 ._2CmrnGY-Amtd83ScJkFvx2 {
   display: none !important;
@@ -226,6 +226,21 @@
 ._1wAArO4jx5Kth5YdKAQ_Sd {
   margin-top: 0 !important;
 }
+
+/* remove game hover blur */
+.Yts2cS2BIbHJoh5UorpDq {
+  display: none;
+}
+
+._2R6-lF5h4f0SPrOL9B9IAw {
+  background-color: transparent;
+}
+
+._2R6-lF5h4f0SPrOL9B9IAw {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+/* */
 
 /* remove game header blur */
 ._dijeIFQK07Fymccmf6qA {
