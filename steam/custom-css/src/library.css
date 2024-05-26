@@ -219,7 +219,7 @@
 
 /* fix recent section spacing */
 .libraryhomerecentgames_RecentGames_[style*='height'] {
-  margin-bottom: -42px;
+  margin-bottom: -22px;
 }
 
 /* fix uninstalled games */
