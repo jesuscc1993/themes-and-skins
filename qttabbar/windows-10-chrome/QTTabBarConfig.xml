@@ -8,14 +8,14 @@
     <RecentTabMax>12</RecentTabMax>
     <RecentFileMax>12</RecentFileMax>
     <RecentFileMax_Exe>24</RecentFileMax_Exe>
-    <ToolbarBGImage>Z:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows-10-chrome\toolbar.png</ToolbarBGImage>
+    <ToolbarBGImage>Y:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows-10-chrome\toolbar.png</ToolbarBGImage>
     <ResolverLongTimeout>10000</ResolverLongTimeout>
     <TabFont>Segoe UI</TabFont>
     <TabFontSize>12</TabFontSize>
     <TabFontStyle>0</TabFontStyle>
     <TabFontStyleActive>0</TabFontStyleActive>
-    <TabImage>Z:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows-10-chrome\tab.png</TabImage>
-    <TabCloseButtonImage>Z:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows-10-chrome\close-icon.png</TabCloseButtonImage>
+    <TabImage>Y:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows-10-chrome\tab.png</TabImage>
+    <TabCloseButtonImage>Y:\Txus\Projects\assorted\themes-and-skins\qttabbar\windows-10-chrome\close-icon.png</TabCloseButtonImage>
     <TabLockImage></TabLockImage>
     <TabImageSizingMargin>08080804</TabImageSizingMargin>
     <TabTextOffsets>-196608</TabTextOffsets>
@@ -83,7 +83,7 @@
     <ViewBorderColor>16777215</ViewBorderColor>
     <ViewFocusedBorderColor>13882323</ViewFocusedBorderColor>
     <TabSwitchItem>10</TabSwitchItem>
-    <ExportDirectory>Z:\Txus\Misc\Temporal</ExportDirectory>
+    <ExportDirectory>Y:\Txus\Misc\Temporal</ExportDirectory>
     <ExportInterval>1</ExportInterval>
     <FileRenamerDepth>0</FileRenamerDepth>
     <FileRenamerNumStart>1</FileRenamerNumStart>
