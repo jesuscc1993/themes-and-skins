@@ -1,13 +1,25 @@
 :root {
-  --c-background: #202326;
-  --c-sidebar: #171718;
+  /* --c-background: #202326; */
+  /* --c-sidebar: #171718; */
+  --c-context-bg: #2b2b2b;
+  --c-context-border: #808080;
 }
 
-._2AUVZlzQq67qe3yhLZsPPB,
+/* ._2AUVZlzQq67qe3yhLZsPPB,
 ._17uEBe5Ri8TMsnfELvs8-N {
   background: var(--c-background) !important;
+} */
+
+/* ._3x1HklzyDs4TEjACrRO2tB {
+  background: var(--c-sidebar) !important;
+} */
+
+.ContextMenuPopupBody .LQkrbbayZPY11qHm01t7F {
+  background: var(--c-context-bg);
 }
 
-._3x1HklzyDs4TEjACrRO2tB {
-  background: var(--c-sidebar) !important;
+.ContextMenuPopupBody
+  ._1F2EcTc-0vNkdiBz8ATakM
+  + .pFo3kQOzrl9qVLPXXGIMp {
+  border-color: var(--c-context-border);
 }
