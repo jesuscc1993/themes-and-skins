@@ -175,6 +175,10 @@
   transform: none !important;
 }
 
+.appgrid_LibraryImageBackgroundGlow {
+  display: none;
+}
+
 /* custom library section spacing */
 .libraryhomeshowcases_ShowcaseOuter {
   padding-bottom: var(--library-section-gap);
