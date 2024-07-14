@@ -199,7 +199,7 @@
   .kX-tIJx4a9vKVuUkKJARv._1wAArO4jx5Kth5YdKAQ_Sd:not(
     ._3BNwjsy5WltxayFptkx3KF
   ) {
-  background: #24282f;
+  background: var(--c-background);
   display: block;
   height: 100%;
   opacity: var(--uninstalled-overlay-opacity);

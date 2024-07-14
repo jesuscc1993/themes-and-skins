@@ -199,7 +199,7 @@
   .appportrait_UninstalledBar.appportrait_UninstalledBarBottom:not(
     .appportrait_BarDownloading
   ) {
-  background: #24282f;
+  background: var(--c-background);
   display: block;
   height: 100%;
   opacity: var(--uninstalled-overlay-opacity);
