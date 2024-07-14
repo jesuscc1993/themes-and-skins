@@ -210,6 +210,8 @@
   ) {
   transform: rotateX(3deg) translateZ(15px);
 }
+
+/* fixed "family sharing" missing a bg */
 .appportraithover_AppStatus {
   background: #363c45;
 }
