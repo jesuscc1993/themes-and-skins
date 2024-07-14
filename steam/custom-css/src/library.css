@@ -210,6 +210,9 @@
   ) {
   transform: rotateX(3deg) translateZ(15px);
 }
+.appportraithover_AppStatus {
+  background: #363c45;
+}
 
 /* hide sidebar game icons */
 .library_LeftListSizableContainer .gamelistentry_AppIcon,
