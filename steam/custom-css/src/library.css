@@ -186,6 +186,7 @@
 
 /* cover border radius */
 .appportrait_LibraryItemBox,
+.appportraithover_AppPortraitHover,
 .libraryhomerecentgames_RecentGameMediaContainer {
   border-radius: var(--cover-border-radius);
   overflow: hidden;
