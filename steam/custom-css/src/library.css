@@ -2,10 +2,10 @@
   --banner-border-radius: 2px;
   --cover-border-radius: 4px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
-  --cover-width: 154px; /* 140, 154 */
+  --cover-width: 160px; /* default: 148 */
   --cover-width-landscape: calc(var(--cover-width) * 2 + var(--grid-gap));
   --game-header-height: 256px;
-  --grid-gap: 18px;
+  --grid-gap: 12px;
   --library-section-gap: 8px;
   --library-sidebar-width: 320px;
   --uninstalled-overlay-opacity: 0.85;
@@ -104,7 +104,7 @@
 
 /* custom cover sizes: recent games */
 .libraryhomeshowcases_Showcase_ .libraryhomeshowcases_ChildrenContainer_ {
-  margin: 0 5px !important;
+  margin: 0 2px !important;
 }
 .libraryhomerecentgames_RecentGame_:not(:last-child) {
   margin-right: var(--grid-gap);
@@ -185,7 +185,8 @@
 }
 
 /* cover border radius */
-.libraryassetimage_PortraitImage {
+.appportrait_LibraryItemBox,
+.libraryhomerecentgames_RecentGameMediaContainer {
   border-radius: var(--cover-border-radius);
   overflow: hidden;
 }
