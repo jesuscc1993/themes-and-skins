@@ -16,6 +16,31 @@
   padding: 4px 12px;
 }
 
+/* overview achievements as rows */
+._27m9Qbg4ShilOgwvYZWV8l
+  ._1vG-vFfwpDeNStVbyo1Qy6
+  ._1zaACxBAyMqq2MspuISjix {
+  flex-direction: column;
+  gap: 0;
+}
+
+._27m9Qbg4ShilOgwvYZWV8l
+  ._1vG-vFfwpDeNStVbyo1Qy6
+  ._1zaACxBAyMqq2MspuISjix
+  .nzZlhFJAzKTdsKCWil0F9 {
+  width: 100%;
+  box-sizing: border-box;
+  height: 88px;
+}
+
+._27m9Qbg4ShilOgwvYZWV8l
+  ._1vG-vFfwpDeNStVbyo1Qy6
+  ._1zaACxBAyMqq2MspuISjix
+  .nzZlhFJAzKTdsKCWil0F9
+  + .nzZlhFJAzKTdsKCWil0F9 {
+  margin-top: 0;
+}
+
 /* hide toolbar unless hovered */
 /*._3OzkVrQFFPv0aV41N4MrHV._1kICdMcVupzY5a9PzI2JIU {
   bottom: 8px;

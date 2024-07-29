@@ -156,12 +156,12 @@
 /* */
 
 /* resize header */
-._2meE3N6-Wkw3yQUVtQK-i8,
-._1sarAIIhbGSUQoAZkztD_F {
+.NZMJ6g2iVnFsOOp-lDmIP,
+._1IX7FPSY9Jb82KhBVBSkZa {
   max-height: calc(var(--game-header-height) - 64px) !important;
 }
-._3VFZBY9W_BxsLy1TbDhRYZ,
-._dijeIFQK07Fymccmf6qA {
+.QlR9EFwTdUNm_J5vx54_Z,
+.HNbe3eZf6H7dtJ042x1vM {
   height: var(--game-header-height);
 }
 /* */
@@ -251,7 +251,7 @@
 /* */
 
 /* remove game header blur */
-._dijeIFQK07Fymccmf6qA {
+.HNbe3eZf6H7dtJ042x1vM {
   max-width: none;
   -webkit-mask-image: none;
 }

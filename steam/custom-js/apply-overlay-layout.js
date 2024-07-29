@@ -17,7 +17,7 @@ const centerColumns = [
 
 const rightSidebars = ['Achievements'];
 
-const centeredWindows = ['OverlayTimer', 'Settings'];
+const centeredWindows = ['ControllerConfigurator', 'OverlayTimer', 'Settings'];
 
 const run = () => {
   console.log(`Opened ${window.name}.`);
