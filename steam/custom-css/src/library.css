@@ -261,6 +261,11 @@
   border-radius: var(--banner-border-radius);
 }
 
+/* decapitalize collections */
+/*._2mZ8LlvoUiyeEUtIWuTri {
+  text-transform: none;
+}*/
+
 /* hide item owners */
 ._3zxPLsbnU5LuorR0_EPCEC {
   display: none;
