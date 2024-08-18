@@ -103,8 +103,17 @@
 .appportrait_LibraryItemBox {
   border-width: 0 !important;
 }
+.allcollections_ScrollContainer {
+  padding: 8px 12px !important;
+}
+.allcollections_Grid {
+  gap: var(--grid-gap) !important;
+  grid-auto-rows: var(--cover-width) !important;
+  grid-template-columns: repeat(auto-fill, var(--cover-width)) !important;
+}
 .allcollections_Collection_ .allcollections_CollectionLabel_ {
-  width: calc(100% - 20px);
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* custom cover sizes: recent games */

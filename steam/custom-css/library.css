@@ -103,8 +103,17 @@
 .WYgDg9NyCcMIVuMyZ_NBC {
   border-width: 0 !important;
 }
+.u1xD3KJEgksF_J_5TLZzO {
+  padding: 8px 12px !important;
+}
+.Ma65KR7z4XhZl4vJvxf4D {
+  gap: var(--grid-gap) !important;
+  grid-auto-rows: var(--cover-width) !important;
+  grid-template-columns: repeat(auto-fill, var(--cover-width)) !important;
+}
 ._3IWn-2rn7x98o5fDd0rAxb ._1J1LQ0vGtpM3n0xw7XwQM6 {
-  width: calc(100% - 20px);
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* custom cover sizes: recent games */
