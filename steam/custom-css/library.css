@@ -61,6 +61,11 @@
   margin-left: calc(var(--library-sidebar-width) * -1);
 }
 
+._9sPoVBFyE_vE87mnZJ5aB
+  .ReactVirtualized__Grid__innerScrollContainer {
+  padding-bottom: 48px;
+}
+
 ._17uEBe5Ri8TMsnfELvs8-N {
   border-bottom: 16px solid #2c323a;
   height: 316px !important;
@@ -265,3 +270,8 @@
 ._3zxPLsbnU5LuorR0_EPCEC {
   display: none;
 }
+
+/* decapitalize collections */
+/*._2mZ8LlvoUiyeEUtIWuTri {
+  text-transform: none;
+}*/

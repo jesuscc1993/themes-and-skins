@@ -61,6 +61,11 @@
   margin-left: calc(var(--library-sidebar-width) * -1);
 }
 
+.library_LeftListSizableContainer
+  .ReactVirtualized__Grid__innerScrollContainer {
+  padding-bottom: 48px;
+}
+
 .libraryhome_UpdatesContainer {
   border-bottom: 16px solid #2c323a;
   height: 316px !important;
