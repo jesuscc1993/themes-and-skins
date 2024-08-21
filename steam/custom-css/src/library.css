@@ -234,6 +234,10 @@
   transform: rotateX(3deg) translateZ(15px);
 }
 
+.appportrait_LibraryItemIcons {
+  z-index: 10;
+}
+
 /* fixed "family sharing" missing a bg */
 .appportraithover_AppStatus {
   background: #363c45;
