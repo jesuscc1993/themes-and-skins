@@ -4,6 +4,10 @@
 }
 
 /* hide achievement date in sidebar */
+.achievementslist_AchievementListItemBase_ {
+  min-height: 80px !important;
+}
+
 .achievementslist_AchievementListItemBase_
   .achievementslist_Container_
   .achievementslist_Right_ {
