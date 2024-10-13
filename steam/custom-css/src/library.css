@@ -244,6 +244,11 @@
   font-size: 11.75px;
 }
 
+/* hide redundant home/collections sidebar buttons */
+.gamelistbar_GameListHomeAndSearch_ {
+  display: none;
+}
+
 /* hide sidebar game icons */
 .library_LeftListSizableContainer .gamelistentry_AppIcon,
 .library_LeftListSizableContainer .gamelistentry_GameIcon {
