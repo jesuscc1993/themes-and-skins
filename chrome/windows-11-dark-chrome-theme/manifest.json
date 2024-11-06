@@ -1,0 +1,26 @@
+{
+  "description": "Windows 11 Dark Theme for Google Chrome.",
+  "manifest_version": 3,
+  "name": "Windows 11 Dark Theme",
+  "theme": {
+    "colors": {
+      "bookmark_text": [204, 204, 204],
+      "button_background": [0, 0, 0, 0],
+      "frame": [32, 32, 32],
+      "frame_inactive": [44, 44, 44],
+      "frame_incognito": [32, 32, 32],
+      "frame_incognito_inactive": [44, 44, 44],
+      "ntp_background": [31, 31, 31],
+      "ntp_link": [204, 204, 204],
+      "ntp_text": [204, 204, 204],
+      "omnibox_background": [56, 56, 56],
+      "tab_background_text": [204, 204, 204],
+      "tab_text": [204, 204, 204],
+      "toolbar": [44, 44, 44]
+    },
+    "tints": {
+      "buttons": [0, 0, 0.8]
+    }
+  },
+  "version": "1.0.0"
+}
