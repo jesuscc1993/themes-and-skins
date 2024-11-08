@@ -23,14 +23,6 @@
         x="66"
         y="27"
       />
-      <meter
-        type="VerticalSliderKnob"
-        image="OSD/knob.png"
-        x="66"
-        y="17"
-        width="190"
-        height="8"
-      />
       <iconset location="Notification Icons" />
       <sound file="sound.wav" />
     </volume>
