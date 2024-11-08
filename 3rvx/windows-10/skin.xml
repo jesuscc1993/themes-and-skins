@@ -11,7 +11,7 @@
         type="Text"
         format="[[PERC]]"
         font="Segoe UI"
-        size="24"
+        size="18"
         color="FFFFFF"
         align="center"
         x="286"
@@ -41,6 +41,12 @@
 
   <sliders>
     <volume background="Control/background.png">
+      <meter
+        type="HorizontalBar"
+        image="Control/bar.png"
+        x="66"
+        y="28"
+      />
       <slider
         type="horizontal"
         image="Control/knob.png"
@@ -49,6 +55,7 @@
         width="232"
         height="8"
       />
+      <sound file="sound.wav" />
     </volume>
   </sliders>
 </skin>

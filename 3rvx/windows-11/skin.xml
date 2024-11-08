@@ -41,6 +41,12 @@
 
   <sliders>
     <volume background="Control/background.png">
+      <meter
+        type="HorizontalBar"
+        image="Control/bar.png"
+        x="66"
+        y="28"
+      />
       <slider
         type="horizontal"
         image="Control/knob.png"
