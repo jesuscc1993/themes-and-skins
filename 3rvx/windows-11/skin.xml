@@ -10,8 +10,8 @@
       <meter
         type="Text"
         format="[[PERC]]"
-        font="Segoe UI"
-        size="18"
+        font="Segoe UI Semilight"
+        size="24"
         color="FFFFFF"
         align="center"
         x="286"
@@ -22,6 +22,14 @@
         image="OSD/bar.png"
         x="66"
         y="27"
+      />
+      <slider
+        type="horizontal"
+        image="OSD/knob.png"
+        x="66"
+        y="20"
+        width="190"
+        height="20"
       />
       <iconset location="Notification Icons" />
       <sound file="sound.wav" />
@@ -34,17 +42,27 @@
   <sliders>
     <volume background="Control/background.png">
       <meter
+        type="Text"
+        format="[[PERC]]"
+        font="Segoe UI"
+        size="24"
+        color="FFFFFF"
+        align="center"
+        x="286"
+        y="12"
+      />
+      <meter
         type="HorizontalBar"
         image="Control/bar.png"
         x="66"
-        y="28"
+        y="27"
       />
       <slider
         type="horizontal"
         image="Control/knob.png"
         x="66"
         y="20"
-        width="232"
+        width="190"
         height="20"
       />
     </volume>
