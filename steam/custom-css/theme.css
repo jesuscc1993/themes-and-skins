@@ -1,7 +1,9 @@
 :root {
   --c-background: #2c323a;
-  --c-context-bg: #2b2b2b;
-  --c-context-border: #808080;
+  --c-context-fg: #dcdedf;
+  --c-context-bg: #2c2c2c;
+  --c-context-inner-border: #404040;
+  --c-context-outer-border: #4b4b4b;
   /* --c-sidebar: #171718; */
 }
 
@@ -19,12 +21,27 @@
   background: var(--c-background);
 }
 
+/* .ContextMenuPopupBody {
+  background: var(--c-context-outer-border) !important;
+} */
+
 .ContextMenuPopupBody .PP7LM0Ow1K5qkR8WElLpt {
   background: var(--c-context-bg);
+  border: 1px solid var(--c-context-outer-border);
+  /* border-radius: 5px; */
+}
+
+.ContextMenuPopupBody ._1n7Wloe5jZ6fSuvV18NNWI {
+  border-radius: 4px;
+}
+.ContextMenuPopupBody ._1n7Wloe5jZ6fSuvV18NNWI:hover,
+.ContextMenuPopupBody ._1n7Wloe5jZ6fSuvV18NNWI:hover ._54dy2uxVcadf_1e6Poifs {
+  background: var(--c-context-outer-border);
+  color: var(--c-context-fg);
 }
 
 .ContextMenuPopupBody
   .WUOrULWKkGLl3ZUQdDXg8
   + ._1n7Wloe5jZ6fSuvV18NNWI {
-  border-color: var(--c-context-border);
+  border-color: var(--c-context-inner-border);
 }
