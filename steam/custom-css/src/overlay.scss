@@ -3,46 +3,39 @@
   bottom: 7px;
 }
 
-/* hide achievement date in sidebar */
 .achievementslist_AchievementListItemBase_ {
   min-height: 80px !important;
-}
 
-.achievementslist_AchievementListItemBase_
-  .achievementslist_Container_
-  .achievementslist_Right_ {
-  display: none;
-}
+  /* hide achievement date in sidebar */
+  .achievementslist_Container_ .achievementslist_Right_ {
+    display: none;
+  }
 
-/* tweaks to achievements for better responsiveness */
-.achievementslist_AchievementListItemBase_ .achievementslist_Container_ {
-  gap: 12px;
-  padding: 4px 12px;
+  /* tweaks to achievements for better responsiveness */
+  .achievementslist_Container_ {
+    gap: 12px;
+    padding: 4px 12px;
+  }
 }
 
 /* overview achievements as rows */
-.steamdesktopoverlay_GameOverview
-  .steamdesktopoverlay_GameOverviewSection
-  .steamdesktopoverlay_AchievementsList {
-  flex-direction: column;
-  gap: 0;
-}
+.steamdesktopoverlay_GameOverview {
+  .steamdesktopoverlay_GameOverviewSection {
+    .steamdesktopoverlay_AchievementsList {
+      flex-direction: column;
+      gap: 0;
 
-.steamdesktopoverlay_GameOverview
-  .steamdesktopoverlay_GameOverviewSection
-  .steamdesktopoverlay_AchievementsList
-  .steamdesktopoverlay_RecentAchievement {
-  width: 100%;
-  box-sizing: border-box;
-  height: 88px;
-}
+      .steamdesktopoverlay_RecentAchievement {
+        width: 100%;
+        box-sizing: border-box;
+        height: 88px;
 
-.steamdesktopoverlay_GameOverview
-  .steamdesktopoverlay_GameOverviewSection
-  .steamdesktopoverlay_AchievementsList
-  .steamdesktopoverlay_RecentAchievement
-  + .steamdesktopoverlay_RecentAchievement {
-  margin-top: 0;
+        & + .steamdesktopoverlay_RecentAchievement {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 }
 
 /* hide toolbar unless hovered */
