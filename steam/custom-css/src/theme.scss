@@ -1,0 +1,46 @@
+:root {
+  --c-background: #2c323a;
+  --c-context-fg: #dcdedf;
+  --c-context-bg: #2c2c2c;
+  --c-context-inner-border: #404040;
+  --c-context-outer-border: #4b4b4b;
+  /* --c-sidebar: #171718; */
+}
+
+/* .libraryhome_InnerContainer,
+.libraryhome_UpdatesContainer {
+  background: var(--c-background) !important;
+} */
+
+/* .gamelistbar_Container {
+  background: var(--c-sidebar) !important;
+} */
+
+.collectionview_OuterContainer,
+.libraryhome_LibraryHome {
+  background: var(--c-background);
+}
+
+.ContextMenuPopupBody {
+  // background: var(--c-context-outer-border) !important;
+
+  .contextmenu_contextMenuContents:not(.supernav_MenuPopup) {
+    background: var(--c-context-bg);
+    border: 1px solid var(--c-context-outer-border);
+    /* border-radius: 5px; */
+
+    .contextmenu_contextMenuItem {
+      border-radius: 4px;
+
+      &:hover,
+      &:hover .jumplist_Running {
+        background: var(--c-context-outer-border);
+        color: var(--c-context-fg);
+      }
+    }
+
+    .contextmenu_ContextMenuSeparator + .contextmenu_contextMenuItem {
+      border-color: var(--c-context-inner-border);
+    }
+  }
+}

@@ -11,16 +11,16 @@
   --uninstalled-overlay-opacity: 0.85;
 }
 
-/* hide favorites collection */
-.libraryhomeshowcases_ShowcaseGrid_[style*='grid-auto-rows: 148px;']
+.libraryhomeshowcases_ShowcaseGrid_[style*='grid-auto-rows: 148px;'] {
+  /* hide favorites collection */
   > .allcollections_Collection_:first-of-type {
-  display: none !important;
-}
+    display: none !important;
+  }
 
-/* hide soundtracks collection */
-.libraryhomeshowcases_ShowcaseGrid_[style*='grid-auto-rows: 148px;']
+  /* hide soundtracks collection */
   > .allcollections_Collection_:last-of-type {
-  display: none !important;
+    display: none !important;
+  }
 }
 
 /* hide address bar */
@@ -45,9 +45,10 @@
   height: var(--height);
   padding-top: 24px;
   width: 100%;
-}
-.bottombar_BottomBarContainer:not(:hover) {
-  margin-bottom: calc(var(--height) * -1);
+
+  &:not(:hover) {
+    margin-bottom: calc(var(--height) * -1);
+  }
 }
 
 .library_LeftListSizableContainer {
@@ -56,9 +57,10 @@
   min-width: 0;
   padding-right: 16px;
   width: var(--library-sidebar-width);
-}
-.library_LeftListSizableContainer:not(:hover) {
-  margin-left: calc(var(--library-sidebar-width) * -1);
+
+  &:not(:hover) {
+    margin-left: calc(var(--library-sidebar-width) * -1);
+  }
 }
 
 .library_LeftListSizableContainer
@@ -70,12 +72,13 @@
   border-bottom: 16px solid #2c323a;
   height: 316px !important;
   width: 100%;
-}
-.libraryhome_UpdatesContainer:hover {
-  border-bottom-width: 0;
-}
-.libraryhome_UpdatesContainer:not(:hover) {
-  margin-top: -300px;
+
+  &:hover {
+    border-bottom-width: 0;
+  }
+  &:not(:hover) {
+    margin-top: -300px;
+  }
 }
 
 .libraryhome_LibraryHome {
@@ -90,12 +93,13 @@
   grid-template-columns: repeat(auto-fill, var(--cover-width)) !important;
   justify-content: center !important;
   padding: 8px 0 !important;
-}
-.libraryhomeshowcases_ShowcaseGrid[style*='grid-auto-rows: 222px;'] {
-  grid-auto-rows: var(--cover-height) !important;
-}
-.libraryhomeshowcases_ShowcaseGrid[style*='grid-auto-rows: 148px;'] {
-  grid-auto-rows: var(--cover-width) !important;
+
+  &[style*='grid-auto-rows: 222px;'] {
+    grid-auto-rows: var(--cover-height) !important;
+  }
+  &[style*='grid-auto-rows: 148px;'] {
+    grid-auto-rows: var(--cover-width) !important;
+  }
 }
 .libraryhomeshowcases_ShowcaseHeader {
   padding-left: 0;
@@ -126,17 +130,23 @@
 .libraryhomerecentgames_RecentGame_:not(:last-child) {
   margin-right: var(--grid-gap);
 }
-.libraryhomerecentgames_RecentGameMediaContainer_[style*='width: 311.984px'] {
+.libraryhomerecentgames_RecentGameMediaContainer {
   width: var(--cover-width-landscape) !important;
   height: var(--cover-height) !important;
-}
-.libraryhomerecentgames_RecentGameMediaContainer_[style*='width: 148px;'] {
-  width: var(--cover-width) !important;
-  height: var(--cover-height) !important;
-}
-.libraryhomerecentgames_RecentGameMediaContainer_
+
+  &[style*='width: 311.984px'] {
+    width: var(--cover-width-landscape) !important;
+    height: var(--cover-height) !important;
+  }
+
+  &[style*='width: 148px;'] {
+    width: var(--cover-width) !important;
+    height: var(--cover-height) !important;
+  }
+
   .libraryassetimage_Container_.libraryassetimage_LandscapeImage {
-  padding-top: calc(var(--cover-height) - 76px);
+    padding-top: calc(var(--cover-height) - 76px);
+  }
 }
 /* */
 
@@ -162,13 +172,13 @@
 .libraryhome_LibraryHome > div {
   display: flex;
   flex-direction: column;
-}
 
-.libraryhome_LibraryHome > div > .libraryhomeshowcases_Sortable {
-  order: 0;
-}
-.libraryhome_LibraryHome > div > *:not(.libraryhomeshowcases_Sortable) {
-  order: 1;
+  > .libraryhomeshowcases_Sortable {
+    order: 0;
+  }
+  > *:not(.libraryhomeshowcases_Sortable) {
+    order: 1;
+  }
 }
 /* */
 
