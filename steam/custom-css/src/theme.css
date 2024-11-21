@@ -25,22 +25,31 @@
   background: var(--c-context-outer-border) !important;
 } */
 
-.ContextMenuPopupBody .contextmenu_contextMenu {
+.ContextMenuPopupBody
+  .contextmenu_contextMenuContents:not(.supernav_MenuPopup) {
   background: var(--c-context-bg);
   border: 1px solid var(--c-context-outer-border);
   /* border-radius: 5px; */
 }
 
-.ContextMenuPopupBody .contextmenu_contextMenuItem {
+.ContextMenuPopupBody
+  .contextmenu_contextMenuContents:not(.supernav_MenuPopup)
+  .contextmenu_contextMenuItem {
   border-radius: 4px;
 }
-.ContextMenuPopupBody .contextmenu_contextMenuItem:hover,
-.ContextMenuPopupBody .contextmenu_contextMenuItem:hover .jumplist_Running {
+.ContextMenuPopupBody
+  .contextmenu_contextMenuContents:not(.supernav_MenuPopup)
+  .contextmenu_contextMenuItem:hover,
+.ContextMenuPopupBody
+  .contextmenu_contextMenuContents:not(.supernav_MenuPopup)
+  .contextmenu_contextMenuItem:hover
+  .jumplist_Running {
   background: var(--c-context-outer-border);
   color: var(--c-context-fg);
 }
 
 .ContextMenuPopupBody
+  .contextmenu_contextMenuContents:not(.supernav_MenuPopup)
   .contextmenu_ContextMenuSeparator
   + .contextmenu_contextMenuItem {
   border-color: var(--c-context-inner-border);
