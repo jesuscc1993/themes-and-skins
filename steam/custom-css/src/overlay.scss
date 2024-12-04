@@ -6,10 +6,13 @@
 .achievementslist_AchievementListItemBase_ {
   min-height: 80px !important;
 
-  /* hide achievement date in sidebar */
+  /* hide extra achievement data in sidebar when space is not enough */
   @media (max-width: 480px) {
-    .achievementslist_Container_ .achievementslist_Right_ {
-      display: none;
+    .achievementslist_Container_ {
+      .achievementslist_Right_,
+      .achievementslist_AchievementGlobalPercentage {
+        display: none;
+      }
     }
   }
 
