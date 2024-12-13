@@ -32,15 +32,29 @@
 }
 
 /* compact top menu */
+$top-menu-height: 38px;
+
 .steamdesktop_TitleBar {
-  height: 38px;
+  height: $top-menu-height;
 
   .steamdesktop_RootMenuBar {
     display: none;
   }
+  .steamdesktop_WindowControls {
+    flex: 0 0 116px;
+  }
   .titlebarcontrols_TitleBarControls {
     margin-top: 2px;
   }
+}
+
+.DesktopUI .title-bar-actions {
+  max-height: $top-menu-height;
+}
+
+.DesktopUI .title-area-icon {
+  height: $top-menu-height;
+  width: $top-menu-height;
 }
 
 .steamdesktop_SuperNavBar {
