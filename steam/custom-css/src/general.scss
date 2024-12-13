@@ -30,3 +30,20 @@
 .contextmenu_ForceDesktop .contextmenu_contextMenuItem {
   padding: var(--context-menu-padding);
 }
+
+/* compact top menu */
+.steamdesktop_TitleBar {
+  height: 38px;
+
+  .steamdesktop_RootMenuBar {
+    display: none;
+  }
+  .titlebarcontrols_TitleBarControls {
+    margin-top: 2px;
+  }
+}
+
+.steamdesktop_SuperNavBar {
+  position: absolute;
+  top: 4px;
+}
