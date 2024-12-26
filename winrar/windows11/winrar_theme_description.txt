@@ -1,0 +1,2 @@
+title=Windows 11 48x48
+about=Windows 11 48x48 theme
