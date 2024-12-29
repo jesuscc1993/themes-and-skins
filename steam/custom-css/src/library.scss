@@ -81,18 +81,19 @@
   }
 }
 
-.libraryhome_LibraryHome {
-  padding: 8px 8px 32px 10px;
-}
-
 .library_LibraryWindowDivider {
   display: none;
 }
 /* */
 
 /* custom cover sizes */
-/* custom cover sizes: grid */
-.libraryhomeshowcases_ShowcaseGrid {
+/* custom cover sizes: grids */
+.libraryhome_LibraryHome,
+.collectionview_Container {
+  padding: 8px 8px 32px 10px;
+}
+.libraryhomeshowcases_ShowcaseGrid,
+.appgrid_YourCollection {
   gap: var(--grid-gap) !important;
   grid-template-columns: repeat(auto-fill, var(--cover-width)) !important;
   justify-content: center !important;
@@ -105,8 +106,13 @@
     grid-auto-rows: var(--cover-width) !important;
   }
 }
-.libraryhomeshowcases_ShowcaseHeader {
+.libraryhomeshowcases_ShowcaseHeader,
+.appgrid_AppGridSectionHeader {
   padding-left: 0;
+}
+.appgrid_AppGridSectionHeader {
+  margin-left: 0;
+  transform: none;
 }
 .cssgrid_Container {
   height: auto !important;
@@ -114,6 +120,8 @@
 .appportrait_LibraryItemBox {
   border-width: 0 !important;
 }
+
+/* custom cover sizes: collections */
 .allcollections_ScrollContainer {
   padding: 24px 12px 0 !important;
 }
