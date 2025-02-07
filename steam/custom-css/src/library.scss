@@ -8,7 +8,7 @@
   --grid-gap: 12px;
   --library-section-gap: 8px;
   --library-sidebar-width: 320px;
-  --uninstalled-overlay-opacity: 0.85;
+  --uninstalled-game-opacity: 0.15;
 }
 
 .libraryhomeshowcases_ShowcaseGrid_[style*='grid-auto-rows: 148px;'] {
@@ -163,7 +163,8 @@
 /* */
 
 /* hide game card badges until hovered */
-.appportrait_LibraryItemBox {
+.appportrait_LibraryItemBox,
+.libraryhomerecentgames_RecentGameMediaContainer {
   transition-duration: 150ms !important;
   transition-timing-function: cubic-bezier(0, 0.7, 0.8, 1) !important;
   overflow: visible;
@@ -236,29 +237,14 @@
   padding: 0;
 }
 
-.appportrait_Draggable
-  .appportrait_UninstalledBar.appportrait_UninstalledBarBottom:not(
-    .appportrait_BarDownloading
+.appportrait_Draggable:has(
+    .appportrait_UninstalledBar.appportrait_UninstalledBarBottom:not(
+        .appportrait_BarDownloading
+      )
   ) {
-  background: var(--c-background);
-  display: block;
-  height: 100%;
-  opacity: var(--uninstalled-overlay-opacity);
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-}
-
-.appportrait_HoversEnabled_
-  .LibraryItemBox:hover:not(
-    .appportrait_Landscape_
-      .appportrait_UninstalledBar.appportrait_UninstalledBarBottom
-  ) {
-  transform: rotateX(3deg) translateZ(15px);
-}
-
-.appportrait_LibraryItemIcons {
-  z-index: 10;
+  .libraryassetimage_Image {
+    opacity: var(--uninstalled-game-opacity);
+  }
 }
 
 /* fixed "family sharing" missing a bg and spanning two lines */
@@ -283,9 +269,14 @@
   margin-bottom: -22px;
 }
 
-/* fix uninstalled games */
-.appportrait_UninstalledBarBottom {
-  margin-top: 0 !important;
+/* fix inconsistent shadows */
+.LibraryItemBox,
+.RecentGameMediaContainer {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+
+  &:hover:not(.Landscape) {
+    box-shadow: 0px 14px 12px 0px rgba(0, 0, 0, 0.3);
+  }
 }
 
 /* remove game hover blur */

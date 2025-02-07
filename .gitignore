@@ -1,4 +1,4 @@
 desktop.ini
 node_modules
 steam/config_USER.json
-steam/custom-css/src/**.css
+steam/custom-css/src/**.css**
