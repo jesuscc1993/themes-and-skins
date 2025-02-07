@@ -269,6 +269,11 @@
   margin-bottom: -22px;
 }
 
+/* fix filter tags */
+.SearchFilterInput .FilterTag {
+  height: 18px;
+}
+
 /* fix inconsistent shadows */
 .LibraryItemBox,
 .RecentGameMediaContainer {
