@@ -317,6 +317,11 @@
   display: none;
 }
 
+/* minor tweak to cover hover */
+.AppTitleContainer {
+  padding: 10px 8px;
+}
+
 /* decapitalize collections */
 /*.gamelistsectionheader_SectionName {
   text-transform: none;
