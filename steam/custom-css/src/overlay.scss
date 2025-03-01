@@ -43,6 +43,11 @@
   }
 }
 
+/* round toolbar buttons */
+.ToolbarContainer .Toolbar .ToolbarButton {
+  border-radius: 50%;
+}
+
 /* hide toolbar unless hovered */
 /*[class*="steamdesktopoverlay_ToolbarContainer_"].steamdesktopoverlay_LocationBottom_ {
   bottom: 8px;
