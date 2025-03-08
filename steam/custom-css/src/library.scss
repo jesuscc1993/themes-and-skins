@@ -40,15 +40,18 @@
 }
 
 .bottombar_BottomBarContainer {
-  --height: 50px;
+  --height: 40px;
   bottom: 0;
-  height: var(--height);
-  padding-top: 24px;
   width: 100%;
+  // padding-top: 24px;
 
-  &:not(:hover) {
-    margin-bottom: calc(var(--height) * -1);
+  .bottombar_BottomBar {
+    flex: 0 0 var(--height);
   }
+
+  // &:not(:hover) {
+  //   margin-bottom: calc(var(--height) * -1);
+  // }
 }
 
 .library_LeftListSizableContainer {
