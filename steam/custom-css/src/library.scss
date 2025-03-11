@@ -1,5 +1,6 @@
 :root {
   --banner-border-radius: 2px;
+  --bottom-bar-height: 40px;
   --cover-border-radius: 4px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
   --cover-width: 160px; /* default: 148 */
@@ -40,13 +41,12 @@
 }
 
 .bottombar_BottomBarContainer {
-  --height: 40px;
   bottom: 0;
   width: 100%;
   // padding-top: 24px;
 
   .bottombar_BottomBar {
-    flex: 0 0 var(--height);
+    flex: 0 0 var(--bottom-bar-height);
   }
 
   // &:not(:hover) {
@@ -93,7 +93,7 @@
 /* custom cover sizes: grids */
 .libraryhome_LibraryHome,
 .collectionview_Container {
-  padding: 8px 10px 32px 12px;
+  padding: 8px 10px calc(8px + var(--bottom-bar-height)) 12px;
 }
 .libraryhomeshowcases_ShowcaseGrid,
 .appgrid_YourCollection {
