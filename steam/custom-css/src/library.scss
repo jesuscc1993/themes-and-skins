@@ -325,6 +325,30 @@
   padding: 10px 8px;
 }
 
+/* 32x32 shortcut icons */
+.AppProperties .DialogBody .ShortcutRow .appproperties_Icon {
+  align-items: center;
+  background: #3b3f4880;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+
+  &:hover {
+    background: #43495399;
+  }
+
+  &,
+  .appproperties_AssetImage {
+    --size: 42px;
+    height: var(--size);
+    width: var(--size);
+  }
+  .appproperties_AssetImage {
+    --size: 32px;
+  }
+}
+
 /* decapitalize collections */
 /*.gamelistsectionheader_SectionName {
   text-transform: none;
