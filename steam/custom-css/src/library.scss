@@ -349,7 +349,12 @@
   }
 }
 
-/* decapitalize collections */
+/* disable uppercase for collections */
 /*.gamelistsectionheader_SectionName {
   text-transform: none;
 }*/
+
+/* disable uppercase for time played */
+.appportraithover_PlaytimeDetails .appportraithover_Header {
+  text-transform: none;
+}
