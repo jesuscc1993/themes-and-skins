@@ -12,6 +12,16 @@
   --uninstalled-game-opacity: 0.15;
 }
 
+.LibraryDisplaySizeSmall {
+  --landscape-cover-footer-height: 57px;
+}
+.LibraryDisplaySizeMedium {
+  --landscape-cover-footer-height: 76px;
+}
+.LibraryDisplaySizeLarge {
+  --landscape-cover-footer-height: 90px;
+}
+
 .libraryhomeshowcases_ShowcaseGrid_[style*='grid-auto-rows: 148px;'] {
   /* hide favorites collection */
   > .allcollections_Collection_:first-of-type {
@@ -98,16 +108,10 @@
 .libraryhomeshowcases_ShowcaseGrid,
 .appgrid_YourCollection {
   gap: var(--grid-gap) !important;
+  grid-auto-rows: var(--cover-height) !important;
   grid-template-columns: repeat(auto-fill, var(--cover-width)) !important;
   justify-content: center !important;
   padding: 8px 0 !important;
-
-  &[style*='grid-auto-rows: 222px;'] {
-    grid-auto-rows: var(--cover-height) !important;
-  }
-  &[style*='grid-auto-rows: 148px;'] {
-    grid-auto-rows: var(--cover-width) !important;
-  }
 }
 .libraryhomeshowcases_ShowcaseHeader,
 .appgrid_AppGridSectionHeader {
@@ -142,25 +146,29 @@
 .libraryhomeshowcases_Showcase_ .libraryhomeshowcases_ChildrenContainer_ {
   margin: 0 2px !important;
 }
-.libraryhomerecentgames_RecentGame_:not(:last-child) {
-  margin-right: var(--grid-gap);
-}
-.libraryhomerecentgames_RecentGameMediaContainer {
-  width: var(--cover-width-landscape) !important;
-  height: var(--cover-height) !important;
+.libraryhomerecentgames_RecentGame_ {
+  &:first-child {
+    .libraryhomerecentgames_RecentGameMediaContainer {
+      width: var(--cover-width-landscape) !important;
+      height: var(--cover-height) !important;
 
-  &[style*='width: 311.984px'] {
-    width: var(--cover-width-landscape) !important;
-    height: var(--cover-height) !important;
+      .libraryassetimage_Container_.libraryassetimage_LandscapeImage {
+        padding-top: calc(
+          var(--cover-height) - var(--landscape-cover-footer-height)
+        );
+      }
+    }
   }
 
-  &[style*='width: 148px;'] {
-    width: var(--cover-width) !important;
-    height: var(--cover-height) !important;
+  &:not(:first-child) {
+    .libraryhomerecentgames_RecentGameMediaContainer {
+      width: var(--cover-width) !important;
+      height: var(--cover-height) !important;
+    }
   }
 
-  .libraryassetimage_Container_.libraryassetimage_LandscapeImage {
-    padding-top: calc(var(--cover-height) - 76px);
+  &:not(:last-child) {
+    margin-right: var(--grid-gap);
   }
 }
 /* */
@@ -269,7 +277,11 @@
 
 /* fix recent section spacing */
 .libraryhomerecentgames_RecentGames_[style*='height'] {
-  margin-bottom: -22px;
+  height: auto !important;
+
+  .boxcarousel_BoxCarouselContents_ {
+    padding-bottom: var(--grid-gap);
+  }
 }
 
 /* fix filter tags */
