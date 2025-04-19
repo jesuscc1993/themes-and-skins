@@ -1,25 +1,32 @@
 :root {
   --banner-border-radius: 2px;
   --bottom-bar-height: 40px;
-  --cover-border-radius: 4px;
-  --cover-height: calc(var(--cover-width) * 9 / 6);
-  --cover-width: 160px; /* default: 148px */
-  --cover-width-landscape: calc(var(--cover-width) * 2 + var(--grid-gap));
   --game-header-height: 256px;
-  --grid-gap: round(calc(var(--cover-width) / 14), 2px);
   --library-section-gap: 8px;
   --library-sidebar-width: 320px;
   --uninstalled-game-opacity: 0.15;
 }
 
-.LibraryDisplaySizeSmall {
-  --landscape-cover-footer-height: 57px;
-}
-.LibraryDisplaySizeMedium {
-  --landscape-cover-footer-height: 76px;
-}
-.LibraryDisplaySizeLarge {
-  --landscape-cover-footer-height: 90px;
+.library_Container_ {
+  --cover-border-radius: 4px;
+  --cover-height: calc(var(--cover-width) * 9 / 6);
+  --cover-width-landscape: calc(var(--cover-width) * 2 + var(--grid-gap));
+
+  &.LibraryDisplaySizeSmall {
+    --landscape-cover-footer-height: 57px;
+    --cover-width: 128px;
+    --grid-gap: 6px;
+  }
+  &.LibraryDisplaySizeMedium {
+    --landscape-cover-footer-height: 76px;
+    --cover-width: 160px;
+    --grid-gap: 12px;
+  }
+  &.LibraryDisplaySizeLarge {
+    --landscape-cover-footer-height: 90px;
+    --cover-width: 256px;
+    --grid-gap: 12px;
+  }
 }
 
 .libraryhomeshowcases_ShowcaseGrid_[style*='grid-auto-rows: 148px;'] {
@@ -103,7 +110,9 @@
 /* custom cover sizes: grids */
 .libraryhome_LibraryHome,
 .collectionview_Container {
-  padding: 8px 10px calc(8px + var(--bottom-bar-height)) 12px;
+  padding: var(--library-section-gap) var(--library-section-gap)
+    calc(var(--library-section-gap) + var(--bottom-bar-height))
+    var(--library-section-gap);
 }
 .libraryhomeshowcases_ShowcaseGrid,
 .appgrid_YourCollection {
