@@ -2,30 +2,33 @@
   --banner-border-radius: 2px;
   --bottom-bar-height: 40px;
   --game-header-height: 256px;
-  --library-section-gap: 8px;
-  --library-sidebar-width: 320px;
-  --uninstalled-game-opacity: 0.15;
 }
 
 .library_Container_ {
   --cover-border-radius: 4px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
   --cover-width-landscape: calc(var(--cover-width) * 2 + var(--grid-gap));
+  --library-section-gap: 8px;
+  --library-sidebar-width: 320px;
+  --uninstalled-game-opacity: 0.15;
 
   &.LibraryDisplaySizeSmall {
-    --landscape-cover-footer-height: 57px;
     --cover-width: 128px;
     --grid-gap: 6px;
+    --landscape-cover-footer-height: 57px;
+    --library-padding: 16px;
   }
   &.LibraryDisplaySizeMedium {
-    --landscape-cover-footer-height: 76px;
     --cover-width: 160px;
     --grid-gap: 12px;
+    --landscape-cover-footer-height: 76px;
+    --library-padding: 8px;
   }
   &.LibraryDisplaySizeLarge {
-    --landscape-cover-footer-height: 90px;
     --cover-width: 256px;
     --grid-gap: 12px;
+    --landscape-cover-footer-height: 90px;
+    --library-padding: 16px;
   }
 }
 
@@ -110,9 +113,8 @@
 /* custom cover sizes: grids */
 .libraryhome_LibraryHome,
 .collectionview_Container {
-  padding: var(--library-section-gap) var(--library-section-gap)
-    calc(var(--library-section-gap) + var(--bottom-bar-height))
-    var(--library-section-gap);
+  padding: var(--library-section-gap) var(--library-padding)
+    calc(var(--library-padding) + var(--bottom-bar-height));
 }
 .libraryhomeshowcases_ShowcaseGrid,
 .appgrid_YourCollection {
