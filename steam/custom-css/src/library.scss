@@ -78,7 +78,7 @@
   height: 100%;
   max-width: none;
   min-width: 0;
-  padding-right: 16px;
+  padding-right: var(--library-padding);
   width: var(--library-sidebar-width);
 
   &:not(:hover) {
