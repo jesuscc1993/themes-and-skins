@@ -3,10 +3,10 @@
   --bottom-bar-height: 40px;
   --cover-border-radius: 4px;
   --cover-height: calc(var(--cover-width) * 9 / 6);
-  --cover-width: 160px; /* default: 148 */
+  --cover-width: 160px; /* default: 148px */
   --cover-width-landscape: calc(var(--cover-width) * 2 + var(--grid-gap));
   --game-header-height: 256px;
-  --grid-gap: 12px;
+  --grid-gap: round(calc(var(--cover-width) / 14), 2px);
   --library-section-gap: 8px;
   --library-sidebar-width: 320px;
   --uninstalled-game-opacity: 0.15;
