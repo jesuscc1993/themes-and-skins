@@ -269,10 +269,18 @@
   }
 }
 
-/* fixed "family sharing" missing a bg and spanning two lines */
+/* fix "family sharing" missing a bg and spanning two lines */
 .appportraithover_AppStatus {
   background: #363c45;
   font-size: 11.75px;
+}
+
+/* fix shelf description text */
+.libraryhomeshowcases_EmptyMessage_ .libraryhomeshowcases_Message_ {
+  left: 0;
+  max-width: none;
+  top: 50%;
+  width: 100%;
 }
 
 /* hide redundant home/collections sidebar buttons */
