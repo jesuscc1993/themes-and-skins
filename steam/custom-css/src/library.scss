@@ -17,18 +17,21 @@
     --grid-gap: 7px;
     --landscape-cover-footer-height: 57px;
     --library-padding: 9px;
+    --library-updates-height: 284px;
   }
   &.LibraryDisplaySizeMedium {
     --cover-width: 160px;
     --grid-gap: 12px;
     --landscape-cover-footer-height: 76px;
     --library-padding: 8px;
+    --library-updates-height: 324px;
   }
   &.LibraryDisplaySizeLarge {
     --cover-width: 256px;
     --grid-gap: 12px;
     --landscape-cover-footer-height: 90px;
     --library-padding: 16px;
+    --library-updates-height: 324px;
   }
 }
 
@@ -92,17 +95,22 @@
 }
 
 .libraryhome_UpdatesContainer {
+  --padding: 16px;
   border-bottom: 16px solid #2c323a;
-  height: 316px !important;
+  height: calc(var(--library-updates-height) + var(--padding)) !important;
   width: 100%;
 
   &:hover {
     border-bottom-width: 0;
   }
   &:not(:hover) {
-    margin-top: -300px;
+    margin-top: calc(var(--library-updates-height) * -1);
   }
 }
+
+// .LibraryDisplaySizeSmall .libraryhomenewupdates_PartnerEventRowCapsule_ {
+//   min-width: calc(100% / 6 - 64px);
+// }
 
 .library_LibraryWindowDivider {
   display: none;
