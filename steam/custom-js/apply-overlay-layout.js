@@ -5,7 +5,7 @@ import {
   centerWindows,
 } from './common/overlay-functions.js';
 
-const leftSidebars = ['GameOverview'];
+const leftSidebars = [];
 
 const centerColumns = [
   'GameNotes',
@@ -13,9 +13,10 @@ const centerColumns = [
   'OverlayBrowser_Discussions',
   'OverlayBrowser_Guides',
   'OverlayBrowser_Workshop',
+  'ScreenshotManager',
 ];
 
-const rightSidebars = ['Achievements'];
+const rightSidebars = ['Achievements', 'GameOverview'];
 
 const centeredWindows = ['ControllerConfigurator', 'OverlayTimer', 'Settings'];
 
