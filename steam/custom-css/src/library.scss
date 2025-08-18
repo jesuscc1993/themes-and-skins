@@ -12,6 +12,13 @@
   --library-sidebar-width: 320px;
   --uninstalled-game-opacity: 0.15;
 
+  // --cover-width: calc(
+  //   (
+  //       100vw - 2 * (1px + var(--library-section-gap) + var(--library-padding)) -
+  //         13 * var(--grid-gap)
+  //     ) / 14
+  // );
+
   &.LibraryDisplaySizeSmall {
     --cover-width: 128px;
     --grid-gap: 7px;
