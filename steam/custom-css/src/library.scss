@@ -6,7 +6,7 @@
 
 .library_Container_ {
   --cover-border-radius: 4px;
-  --cover-height: calc(var(--cover-width) * 9 / 6);
+  --cover-height: calc(var(--cover-width) * 3 / 2);
   --cover-width-landscape: calc(var(--cover-width) * 2 + var(--grid-gap));
   --library-section-gap: 8px;
   --library-sidebar-width: 320px;
