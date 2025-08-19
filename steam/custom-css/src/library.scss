@@ -42,6 +42,11 @@
   }
 }
 
+body:has(.LibraryDisplaySizeSmall) .hoverposition_HoverPosition {
+  /* compensate for small grid gap being 7px instead of 8px */
+  margin: 0 -1px;
+}
+
 .libraryhomeshowcases_ShowcaseGrid_[style*='grid-auto-rows: 148px;'] {
   /* hide favorites collection */
   > .allcollections_Collection_:first-of-type {
