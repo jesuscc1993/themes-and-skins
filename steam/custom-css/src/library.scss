@@ -1,5 +1,5 @@
 :root {
-  --banner-border-radius: 2px;
+  --banner-border-radius: 20px;
   --bottom-bar-height: 40px;
   --game-header-height: 256px;
 }
@@ -215,8 +215,8 @@ body:has(.LibraryDisplaySizeSmall) .hoverposition_HoverPosition {
   display: none !important;
 }
 .appportrait_Draggable .appportrait_LibraryItemBoxSubscript {
-  transition: 500ms;
   pointer-events: none;
+  transition: 500ms;
 }
 .appportrait_Draggable:not(:hover) .appportrait_LibraryItemBoxSubscript {
   opacity: 0;
@@ -356,9 +356,21 @@ body:has(.LibraryDisplaySizeSmall) .hoverposition_HoverPosition {
   -webkit-mask-image: none;
 }
 
-/* round game banners */
-.appportrait_AppPortraitBanner_ {
+/* game banners */
+.appportrait_AppPortraitBanner,
+.appportrait_LibraryItemBoxSubscript {
+  /* round game banners */
   border-radius: var(--banner-border-radius);
+  /* readable game banners */
+  font-size: inherit !important;
+}
+
+.appportrait_LibraryItemBoxSubscript:where(
+    .appportrait_MCGreen,
+    .appportrait_MCOrange,
+    .appportrait_MCRed
+  ) {
+  margin-top: -1.25em;
 }
 
 /* hide friends in covers */
