@@ -365,6 +365,17 @@ body:has(.LibraryDisplaySizeSmall) .hoverposition_HoverPosition {
   font-size: inherit !important;
 }
 
+/* dropdowns */
+.appgrid_SortingDropDown_ ._DialogInputContainer {
+  /* round dropdown triggers */
+  border-radius: 10px;
+  overflow: hidden;
+
+  .DialogDropDown_CurrentDisplay {
+    padding-left: 8px;
+  }
+}
+
 .appportrait_LibraryItemBoxSubscript:where(
     .appportrait_MCGreen,
     .appportrait_MCOrange,
