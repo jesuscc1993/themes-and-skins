@@ -432,3 +432,12 @@ body:has(.LibraryDisplaySizeSmall) .hoverposition_HoverPosition {
 .appportraithover_PlaytimeDetails .appportraithover_Header {
   text-transform: none;
 }
+
+/* fit collections text */
+.Collection .CollectionLabel {
+  bottom: 2.25em;
+
+  .CollectionLabelCount {
+    font-size: 1em;
+  }
+}
