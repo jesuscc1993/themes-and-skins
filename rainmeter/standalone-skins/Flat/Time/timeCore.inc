@@ -8,7 +8,6 @@ License = Creative Commons BY-NC 3.0
 Group = HotkeyToggle
 
 [Variables]
-; TimeFormat = %H:%M
 AntiAlias = 1
 FontColor = 255, 255, 255, 255
 FontEffectColor = 0, 0, 0, 64
@@ -20,6 +19,7 @@ OpenDateAndTime = [Shell:::{E2E7934B-DCE5-43C4-9576-7FE4F75E7480}]
 StringAlign = CenterCenter
 StringEffect = Border
 TimeFormat = %H:%M
+; TimeFormat = %Y/%m/%d %H:%M
 
 [MeasureTime]
 Measure = Time
