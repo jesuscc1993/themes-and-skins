@@ -2,7 +2,7 @@
 Version = 1.0.0
 Description = Provides an icon with a contextual menu containing all power options
 Author = MetalTxus
-License = Creative Commons BY-NC 3.0
+License = CC BY-NC 4.0
 
 [Rainmeter]
 Update = -1
