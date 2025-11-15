@@ -442,7 +442,9 @@ body:has(.LibraryDisplaySizeSmall) .hoverposition_HoverPosition {
   }
 }
 
-.downloads_ButtonWrapper {
-  border-radius: 50% !important;
-  overflow: hidden;
+.downloads_SectionItemButtons .downloads_Button {
+  &,
+  &:before {
+    border-radius: 50% !important;
+  }
 }
