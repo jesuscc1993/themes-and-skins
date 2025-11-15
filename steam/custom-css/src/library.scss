@@ -441,3 +441,8 @@ body:has(.LibraryDisplaySizeSmall) .hoverposition_HoverPosition {
     font-size: 1em;
   }
 }
+
+.downloads_ButtonWrapper {
+  border-radius: 50% !important;
+  overflow: hidden;
+}
