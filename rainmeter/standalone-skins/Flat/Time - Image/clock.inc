@@ -38,12 +38,6 @@ DynamicVariables=1
 RegExpSubstitute=1
 Substitute="#DigitRegex#":"\4"
 
-; [ImageBackground]
-; Meter=Image
-; ImageName=bg.png
-; W=51
-; H=#DigitHeight#
-
 [ImageHourDec]
 Meter=Image
 MeasureName=MeasureHourDec
