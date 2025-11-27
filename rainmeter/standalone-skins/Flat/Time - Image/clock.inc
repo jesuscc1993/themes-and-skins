@@ -1,7 +1,3 @@
-[Rainmeter]
-Update=1000
-DynamicWindowSize=1
-
 [Variables]
 DigitRegex="^([0-9]{1})([0-9]{1})([0-9]{1})([0-9]{1})$"
 DigitHeight=19
@@ -9,7 +5,6 @@ DigitWidth=13
 SeparatorWidth=7
 ImageHeight=19
 ImageSpacing=-2
-ImagePath=sharp
 
 [MeasureTime]
 Measure=Time
