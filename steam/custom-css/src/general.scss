@@ -36,8 +36,17 @@ $top-menu-height: 38px;
 
 .steamdesktop_TitleBar {
   height: $top-menu-height;
+  justify-content: flex-end;
 
   .steamdesktop_RootMenuBar {
+    margin-top: 0;
+    padding: 0 0.5rem;
+
+    .rootmenu_Logo {
+      display: none;
+    }
+  }
+  .steamdesktop_DragArea_ {
     display: none;
   }
   .steamdesktop_WindowControls {
