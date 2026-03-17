@@ -280,12 +280,18 @@ body:has(.LibraryDisplaySizeSmall) .hoverposition_HoverPosition {
 }
 
 .appportrait_Draggable:has(
-    .appportrait_UninstalledBar.appportrait_UninstalledBarBottom:not(
-        .appportrait_BarDownloading
-      )
-  ) {
+  .appportrait_UninstalledBar.appportrait_UninstalledBarBottom:not(
+      .appportrait_BarDownloading
+    )
+) {
   .libraryassetimage_Image {
-    opacity: var(--uninstalled-game-opacity);
+    transition-duration: 300ms;
+  }
+
+  &:not(:hover) {
+    .libraryassetimage_Image {
+      opacity: var(--uninstalled-game-opacity);
+    }
   }
 }
 
@@ -377,10 +383,10 @@ body:has(.LibraryDisplaySizeSmall) .hoverposition_HoverPosition {
 }
 
 .appportrait_LibraryItemBoxSubscript:where(
-    .appportrait_MCGreen,
-    .appportrait_MCOrange,
-    .appportrait_MCRed
-  ) {
+  .appportrait_MCGreen,
+  .appportrait_MCOrange,
+  .appportrait_MCRed
+) {
   margin-top: -1.25em;
 }
 
