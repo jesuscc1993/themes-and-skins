@@ -274,23 +274,25 @@ body:has(.LibraryDisplaySizeSmall) .hoverposition_HoverPosition {
   overflow: hidden;
 }
 
-/* fade uninstalled games */
+/* fade uninstalled games in library home */
 .appportrait_LibraryBottomItems_ {
   padding: 0;
 }
 
-.appportrait_Draggable:has(
-  .appportrait_UninstalledBar.appportrait_UninstalledBarBottom:not(
-      .appportrait_BarDownloading
-    )
-) {
-  .libraryassetimage_Image {
-    transition-duration: 300ms;
-  }
-
-  &:not(:hover) {
+.libraryhomeshowcases_Sortable {
+  .appportrait_Draggable:has(
+    .appportrait_UninstalledBar.appportrait_UninstalledBarBottom:not(
+        .appportrait_BarDownloading
+      )
+  ) {
     .libraryassetimage_Image {
-      opacity: var(--uninstalled-game-opacity);
+      transition-duration: 300ms;
+    }
+
+    &:not(:hover) {
+      .libraryassetimage_Image {
+        opacity: var(--uninstalled-game-opacity);
+      }
     }
   }
 }
