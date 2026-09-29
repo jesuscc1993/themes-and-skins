@@ -5,10 +5,10 @@ const VIEWPORT_HEIGHT = SCREEN_HEIGHT - FOOTER_HEIGHT;
 
 /* start: columns */
 const SIDEBAR_WIDTH = SCREEN_WIDTH / 4.5;
-const CENTER_WIDTH = SCREEN_WIDTH - SIDEBAR_WIDTH * 2;
+const MIDDLE_WIDTH = SCREEN_WIDTH - SIDEBAR_WIDTH * 2;
 
 const LEFT_X = 0;
-const CENTER_X = SIDEBAR_WIDTH;
+const MIDDLE_X = SIDEBAR_WIDTH;
 const RIGHT_X = SCREEN_WIDTH - SIDEBAR_WIDTH;
 /* end: columns */
 
@@ -21,7 +21,7 @@ const resizeWindow = (width, height) => {
 
 const moveWindow = (x, y) => {
   if (x !== undefined && y !== undefined) {
-    SteamClient.Window.MoveTo(x, y);
+    SteamClient.Window.MoveTo(x, y, 1);
     console.log(`Moved window "${window.name}" to (${x}, ${y}).`);
   }
 };
@@ -56,9 +56,11 @@ export const centerWindows = (windowNames) => {
 export const processLeftSidebars = (windowNames) => {
   processWindows(windowNames, SIDEBAR_WIDTH, SCREEN_HEIGHT, LEFT_X);
 };
-export const processCenterColumns = (windowNames) => {
-  processWindows(windowNames, CENTER_WIDTH, VIEWPORT_HEIGHT, CENTER_X);
+
+export const processMiddleColumns = (windowNames) => {
+  processWindows(windowNames, MIDDLE_WIDTH, VIEWPORT_HEIGHT, MIDDLE_X);
 };
+
 export const processRightSidebars = (windowNames) => {
   processWindows(windowNames, SIDEBAR_WIDTH, SCREEN_HEIGHT, RIGHT_X);
 };

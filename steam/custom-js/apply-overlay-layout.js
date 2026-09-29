@@ -1,13 +1,15 @@
 import {
-  processCenterColumns,
-  processLeftSidebars,
-  processRightSidebars,
   centerWindows,
+  processLeftSidebars,
+  processMiddleColumns,
+  processRightSidebars,
 } from './common/overlay-functions.js';
 
-const leftSidebars = ['GameOverview'];
+const leftSidebars = [
+  'GameOverview'
+];
 
-const centerColumns = [
+const middleColumns = [
   'GameNotes',
   'OverlayBrowser_Browser',
   'OverlayBrowser_Discussions',
@@ -16,15 +18,21 @@ const centerColumns = [
   'ScreenshotManager',
 ];
 
-const rightSidebars = ['Achievements'];
+const rightSidebars = [
+  'Achievements'
+];
 
-const centeredWindows = ['ControllerConfigurator', 'OverlayTimer', 'Settings'];
+const centeredWindows = [
+  'ControllerConfigurator',
+  'OverlayTimer',
+  'Settings'
+];
 
 const run = () => {
   console.log(`Opened ${window.name}.`);
 
   processLeftSidebars(leftSidebars);
-  processCenterColumns(centerColumns);
+  processMiddleColumns(middleColumns);
   processRightSidebars(rightSidebars);
 
   centerWindows(centeredWindows);
